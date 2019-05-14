@@ -1,25 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <!-- HEADER -->
-    <header class="main-header">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="main-header">
+            <div class="main-header-interface">
+                <a href="" class="main-logo"><img src="http://placehold.it/220x47" alt="Логотип
+                        техномарт"></a>
 
-    </header>
-    
-    <!-- MAIN -->
-    <main class="container">
+                <div class="search">
+                    <input type="text" class="search-input" placeholder="Поиск:">
+                </div>
 
-    </main>
+                <div class="bookmarks">
+                    <b>Закладки:</b>
+                    <span class="bookmarks-count">0</span>
+                </div>
 
-    <!-- FOOTER -->
-    <footer class="main-footer">
+                <div class="cart">
+                    <b>Корзина:</b>
+                    <span class="cart-items-count">0</span>
+                </div>
 
-    </footer>
-</body>
+                <a href="make-order.html">Оформить заказ</a>
+            </div>
+            <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+            <section class="main-header-contacts">
+                <span class="main-header-contacts-phone">+7(812)555-05-55</span><br>
+                <p class="main-header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д.
+                    19/8</p>
+            </section>
+            <nav class="user-nav">
+                <ul>
+                    <li><a href="login.html">Войти</a></li>
+                    <li><a href="register.html">Регистрация</a></li>
+                </ul>
+            </nav>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">Компания</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="special-offers.html">Спецпредложения</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- MAIN -->
+        <main class="container">
+            <h2 class="visually-hidden">Предложения</h2>
+            <section class="promo">
+                <ul class="promo-list">
+                    <li class="promo-item promo-offers-item-goods">
+                        <h3>Материалы</h3>
+                        <a href="">На любой вкус</a>
+                    </li>
+
+                    <li class="promo-item promo-item-tools">
+                        <h3>Инструмент</h3>
+                        <a href="">На все случаи</a>
+                    </li>
+
+                    <li class="promo-item promo-item-technics">
+                        <h3>Техника</h3>
+                        <a href="">Для стройки</a>
+                    </li>
+
+                    <li class="promo-item promo-item-discounts">
+                        <h3>Скидка 50%</h3>
+                        <a href="">На 350 товаров</a>
+                    </li>
+
+                    <li class="promo-item promo-item-delivery">
+                        <h3>Доставка</h3>
+                        <a href="">Бесплатно</a>
+                    </li>
+                </ul>
+
+                <section class="promo-slider">
+                    <h3>Дрели</h3>
+                    <p>Соседям на радость</p>
+                    <span class="promo-slider-prev"><</span>
+                    <span class="promo-slider-next">></span>
+                </section>
+
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="main-footer">
+
+        </footer>
+    </body>
 </html>
