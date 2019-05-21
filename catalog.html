@@ -94,36 +94,46 @@
             <!-- Будет форма -->
             <section class="product-filter">
                 <h3>Фильтр:</h3>
-                <ul>
-                    <li>
-                        <h3>Цена</h3>
-                    </li>
-                    <li>
-                        <h3>Производители</h3>
-                        <form action="">
+                <form action="https://echo.htmlacademy.ru" methiod="GET">
+                    <ul>
+                        <li>
+                            <h3>Цена</h3>
+                        </li>
+                        <li>
+                            <h3>Производители</h3>
                             <ul>
                                 <li>
-                                    <lable><input type="checkbox"></lable>
+                                    <lable><input name="bosch" type="checkbox" checked>Bosch</lable>
                                 </li>
                                 <li>
-                                    <lable><input type="checkbox"></lable>
+                                    <lable><input name="interskol" type="checkbox">Интерскол</lable>
                                 </li>
                                 <li>
-                                    <lable><input type="checkbox"></lable>
+                                    <lable><input name="makita" type="checkbox" checked>Makita</lable>
                                 </li>
                                 <li>
-                                    <lable><input type="checkbox"></lable>
+                                    <lable><input name="dewalt" type="checkbox">Dewalt</lable>
                                 </li>
                                 <li>
-                                    <lable><input type="checkbox"></lable>
+                                    <lable><input name="hitachi" type="checkbox">Hitachi</lable>
                                 </li>
                             </ul>
-                        </form>
-                    </li>
-                    <li>
-                        <h3>Питание</h3>
-                    </li>
-                </ul>
+                        </li>
+                        <li>
+                            <h3>Питание</h3>
+                            <ul>
+                                <li>
+                                    <lable><input name="battery" type="radio" checked>Аккумуляторно</lable>
+                                </li>
+                                <li>
+                                    <lable><input name="mainPower" type="radio">Сетевые</lable>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <button type="submit">Показать</button>
+                </form>
             </section>
 
             <section class="product-sort">
@@ -345,5 +355,20 @@
             </div>
         </div>
     </footer>
+
+    <div>
+        <h2 class="visualy-hidden">Сообщение о покупке</h2>
+        <p>Товар добавлен в корзину</p>
+        <!-- Товары для покупки будем хранить в скрытых полях. Можно и в JS хранить. Не знаю как лучше -->
+        <form action="https://echo.htmlacademy.ru" method="GET">
+            <ul class="visualy-hidden">
+                <li><input name="productName1" type="text" value="Перфоратор BOSCH BFG 3000"></li>
+                <li><input name="productName2" type="text" value="Перфоратор BOSCH BFG 2000"></li>
+            </ul>
+            <button type="submit">Оформит заказ</a>
+            <button type="button">Продолжить покупки</button>
+        </form>
+        <button type="button">X</button>
+    </div>
 </body>
 </html>
