@@ -95,42 +95,39 @@
             <section class="product-filter">
                 <h3>Фильтр:</h3>
                 <form action="https://echo.htmlacademy.ru" method="GET">
-                    <ul>
-                        <li>
-                            <h3>Цена</h3>
-                        </li>
-                        <li>
-                            <h3>Производители</h3>
-                            <ul>
-                                <li>
-                                    <input name="bosch" type="checkbox" checked>Bosch
-                                </li>
-                                <li>
-                                    <input name="interskol" type="checkbox">Интерскол
-                                </li>
-                                <li>
-                                    <input name="makita" type="checkbox" checked>Makita
-                                </li>
-                                <li>
-                                    <input name="dewalt" type="checkbox">Dewalt
-                                </li>
-                                <li>
-                                    <input name="hitachi" type="checkbox">Hitachi
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>Питание</h3>
-                            <ul>
-                                <li>
-                                    <input name="battery" type="radio" checked>Аккумуляторно
-                                </li>
-                                <li>
-                                    <input name="mainPower" type="radio">Сетевые
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+
+                    <fieldset>
+                        <legend>Производители</legend>
+                        <ul>
+                            <li>
+                                <label><input name="bosch" type="checkbox" checked>Bosch</label>
+                            </li>
+                            <li>
+                                <label><input name="interskol" type="checkbox">Интерскол</label>
+                            </li>
+                            <li>
+                                <label><input name="makita" type="checkbox" checked>Makita</label>
+                            </li>
+                            <li>
+                                <label><input name="dewalt" type="checkbox">Dewalt</label>
+                            </li>
+                            <li>
+                                <label><input name="hitachi" type="checkbox">Hitachi</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Питание</legend>
+                        <ul>
+                            <li>
+                                <label><input name="battery" type="radio" checked>Аккумуляторно</label>
+                            </li>
+                            <li>
+                                <label><input name="mainPower" type="radio">Сетевые</label>
+                            </li>
+                        </ul>
+                    </fieldset>
 
                     <button type="submit">Показать</button>
                 </form>
@@ -359,16 +356,11 @@
     <div>
         <h2 class="visualy-hidden">Сообщение о покупке</h2>
         <p>Товар добавлен в корзину</p>
-        <!-- Товары для покупки будем хранить в скрытых полях. Можно и в JS хранить. Не знаю как лучше -->
         <form action="https://echo.htmlacademy.ru" method="GET">
-            <ul class="visualy-hidden">
-                <li><input name="productName1" type="text" value="Перфоратор BOSCH BFG 3000"></li>
-                <li><input name="productName2" type="text" value="Перфоратор BOSCH BFG 2000"></li>
-            </ul>
             <button type="submit">Оформит заказ</button>
             <button type="button">Продолжить покупки</button>
         </form>
-        <button type="button">X</button>
+        <button type="button">Закрыть форму</button>
     </div>
 </body>
 </html>
