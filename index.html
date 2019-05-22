@@ -326,23 +326,25 @@
         <button type="button">Закрыть карту</button>
     </section>
 
-    <section class="feedback">
-        <h2 class="visualy-hidden">Форма связи</h2>
-        <form action="https://echo.htmlacademy.ru" method="POST">
-            <div>
-                <label for="feedback-user-name">Ваше имя:</label>
-                <input id="feedback-user-name" name="name" type="text" placeholder="Имя фамилия"></div>
-            <div>
-                <label for="feedback-email">Ваш e-mail</label>
-                <input id="feedback-email" name="email" type="text" placeholder="email@example.com"></div>
-            <div>
-                <label for="feedback-message-text">Текст письма:</label>
-                <input id="feedback-message-text" name="message" type="text" placeholder="В свободной форме">
-            </div>
-            <button type="submit">Отправить</button>
-        </form>
-        <button type="button">X</button>
-    </section>
+    <div class="dialog">
+        <section class="feedback">
+            <h2 class="visualy-hidden">Форма связи</h2>
+            <form action="https://echo.htmlacademy.ru" method="POST">
+                <div>
+                    <label for="feedback-user-name">Ваше имя:</label>
+                    <input id="feedback-user-name" name="name" type="text" placeholder="Имя фамилия"></div>
+                <div>
+                    <label for="feedback-email">Ваш e-mail</label>
+                    <input id="feedback-email" name="email" type="text" placeholder="email@example.com"></div>
+                <div>
+                    <label for="feedback-message-text">Текст письма:</label>
+                    <textarea id="feedback-message-text" name="message" placeholder="В свободной форме"></textarea>
+                </div>
+                <button type="submit">Отправить</button>
+            </form>
+            <button type="button">Закрыть форму</button>
+        </section>
+    </div>
 </body>
 
 </html>
