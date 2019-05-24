@@ -1,0 +1,23 @@
+{
+  "name": "1049277-technomart-25",
+  "version": "1.0.0",
+  "description": "* Студент: [Симонов Егор](https://up.htmlacademy.ru/htmlcss/25/user/1049277). * Наставник: [Игорь Белогуров](https://htmlacademy.ru/profile/id1026635).",
+  "main": "index.js",
+  "dependencies": {
+    "stylelint-config-htmlacademy": "^0.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uzambara/1049277-technomart-25.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uzambara/1049277-technomart-25/issues"
+  },
+  "homepage": "https://github.com/uzambara/1049277-technomart-25#readme"
+}

@@ -1,0 +1,183 @@
+body{
+    color: white;
+    font-family: Cuprum;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.main-header{
+    background-image: url(../img/header-background.jpg);
+    background-color: #f1f5f7;
+}
+
+.main-header-interface{
+    background-color: #293449;
+    font-size: 17px;
+    line-height: 18px;
+    color: white;
+}
+
+.main-header-interface 
+a:hover{
+    background-color: #212a3a;
+}
+
+.main-header-interface 
+a:active{
+    background-color: #161d29;
+}
+
+.search-input{
+    background-color: #293449;
+    border: none;
+    font-size: 17px;
+    line-height: 18px;
+    color: white;
+    font-family: Cuprum;
+}
+
+.search-input::placeholder{
+    color: white;
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.make-order-link {
+    background-color: #63a63e;
+}
+
+.main-header-interface 
+.make-order-link:hover{
+    background-color: #5fbb2d;
+}
+
+.main-header-interface 
+.make-order-link:active{
+    background-color: #518534;
+}
+
+.main-header-logo{
+    background-color: #ee3643;
+    width: 220px;
+    height: 51px;
+    box-shadow: inset 0px -4.5px 0 0 rgba(0, 0, 0, 0.24);
+    text-align: center;
+    display: block;
+}
+
+.main-header-interface 
+.main-header-logo:hover{
+    background-color: #ca2c37;
+}
+
+.main-header-interface 
+.main-header-logo:active{
+    background-color: #ba2732;
+}
+
+
+.main-header-interface 
+.search-input:hover{
+    background-color: #212a3a;
+}
+
+.main-header-interface 
+.search-input:focus{
+    background-color: #ffffff;
+    border: none;
+    font-size: 17px;
+    line-height: 18px;
+    color: black;
+}
+
+.main-header h1{
+    color: #ee3643;
+    font-size: 16px;
+    line-height: 23px;
+    font-style: italic;
+}
+
+.main-header 
+address{
+    font-style: normal;
+}
+
+.main-header-contacts-phone{
+    color: #ee3643;
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.main-header-contacts-address{
+    color: black;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.new-user-nav 
+li{
+    background-color: white;
+}
+
+.new-user-nav 
+a{
+    color: black;
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.new-user-nav 
+a:hover{
+    color: #ee3643;
+}
+
+.new-user-nav 
+a:active{
+    color: #cacaca;
+}
+
+.site-nav{
+    background-color: #32425c;
+    font-size: 17px;
+    line-height: 17px;
+    box-shadow: inset 0px -4.5px 0 0 #293449;
+}
+
+.promo-item-goods{
+    background-color: #ffbf47;
+}
+
+.promo-item-tools{
+    background-color: #3bbce3;
+}
+
+.promo-item-technics{
+    background-color: #dc91d8;
+}
+
+.promo-item-discounts{
+    background-color: #8ed78f;
+}
+
+.promo-slider-drill{
+    background-image: url(../img/slider/drill.jpg);
+    width: 620px;
+    height: 266px;
+}
+
+.promo-slider-perforator{
+    background-image: url(../img/slider/perforator.jpg);
+    width: 620px;
+    height: 266px;
+}
+
+.promo-item-delivery{
+    background-color: #ffc047;
+}
