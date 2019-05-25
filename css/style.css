@@ -1,5 +1,5 @@
 body{
-    font-family: Cuprum;
+    font-family: Cuprum, sans-serif;
 }
 
 ul{
@@ -283,6 +283,7 @@ a:active{
     line-height: 18px;
     font-size: 20px;
     text-transform: none;
+    font-family: "PT Sans", sans-serif;
 }
 
 .product-card-price{
@@ -290,12 +291,14 @@ a:active{
     font-size: 17px;
     line-height: 18px;
     color: white;
+    font-family: "PT Sans", sans-serif;
 }
 
 .product-card-price-old{
     background-color: #ffffff;
     color: #a9a9a9;
     text-decoration: line-through;
+    font-family: "PT Sans", sans-serif;
 }
 
 .popular-manufacturer-list li:hover{
@@ -311,6 +314,12 @@ a:active{
 
 .service{
     background-color: #f4f8fa;
+}
+
+.service > p{
+    font-size: 13px;
+    line-height: 24px;
+    font-family: "PT Sans", sans-serif;
 }
 
 .service h2, h3{
@@ -329,6 +338,7 @@ a:active{
     font-size: 13px;
     line-height: 24px;
     color: black;
+    font-family: "PT Sans", sans-serif;
 }
 
 .service-item h3{
@@ -468,6 +478,10 @@ a:active{
 }
 
 
+.breadcrumbs{
+    font-family: "PT Sans", sans-serif;
+}
+
 .breadcrumbs li a{
     color: black;
     text-transform: uppercase;
@@ -520,5 +534,6 @@ a:active{
 .about-product p{
     font-size: 13px;
     line-height: 24px;
+    font-family: "PT Sans", sans-serif;
 }
 /* #endregion Catalog.html */
