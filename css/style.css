@@ -12,6 +12,24 @@ a{
     color: white;
 }
 
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.button{
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #ee3643;
+    color: white;
+}
+
 .main-header{
     background-image: url(../img/header-background.jpg);
     background-color: #f1f5f7;
@@ -63,7 +81,7 @@ a:active{
     background-color: #518534;
 }
 
-.main-header-logo{
+.main-logo{
     background-color: #ee3643;
     width: 220px;
     height: 51px;
@@ -73,12 +91,12 @@ a:active{
 }
 
 .main-header-interface 
-.main-header-logo:hover{
+.main-logo:hover{
     background-color: #ca2c37;
 }
 
 .main-header-interface 
-.main-header-logo:active{
+.main-logo:active{
     background-color: #ba2732;
 }
 
@@ -150,6 +168,18 @@ a:active{
     box-shadow: inset 0px -4.5px 0 0 #293449;
 }
 
+.promo-item h3{
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.promo-item a{
+    font-size: 14px;
+    line-height: 18px;
+    background: rgba(0, 0, 0, 0.1);
+}
+  
+
 .promo-item-goods{
     background-color: #ffbf47;
 }
@@ -180,4 +210,145 @@ a:active{
 
 .promo-item-delivery{
     background-color: #ffc047;
+}
+
+
+.promo-slider h3{
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.promo-slider p{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.popular-header{
+    background-color: #f9f5f0;
+}
+
+.popular-header-title{
+    color: #32425c;
+    line-height: 30px;
+    font-size: 30px;
+}
+
+.popular-products h3{
+    color: black;
+    line-height: 18px;
+    font-size: 20px;
+}
+
+.product-item-price{
+    background-color: #ee3643;
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.product-item-price-old{
+    background-color: #ffffff;
+    color: #a9a9a9;
+    text-decoration: line-through;
+}
+
+.popular li{
+    border: 1px solid #eaeaea;
+}
+
+.service{
+    background-image: url(../img/services/background.jpg);
+}
+
+.service h2, h3{
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.service h2{
+    font-size: 30px;
+    line-height: 30px;
+    color: black;
+}
+
+.service-item p{
+    font-size: 13px;
+    line-height: 24px;
+    color: black;
+}
+
+.service-item h3{
+    color: #32425c;
+}
+
+.company-features-item{
+    background-color: #32425c;
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.company-info{
+    color: black;
+}
+
+
+.company-info h2{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.company-info p{
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.company-info-delivery-types li{
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.main-footer{
+    background-color: #32425c;
+}
+
+.bottom-sub-main-footer{
+    background-color: #293449;
+}
+
+.main-footer-catalog-nav a{
+    color: #ffd180;
+}
+
+.main-footer-address{
+    font-style: normal;
+}
+
+.bottom-sub-main-footer{
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.social-button{
+    background-color: #212a3a;
+}
+
+.developer-info-link{
+    color: #f5c97d;
+}
+
+.feed-back-form-label{
+    color: black;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.feed-back-form-input::placeholder{
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.send-form-footer{
+    background-color: #f4f4f4;
 }

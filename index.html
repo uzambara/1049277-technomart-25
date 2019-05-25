@@ -16,7 +16,7 @@
         <!-- ПОИСК, ЗАКЛАДКИ, КОРЗИНА, ОФОРМИТЬ ЗАКАЗ -->
         <div class="main-header-interface">
 
-            <a class="main-header-logo"><img src="img/logo.svg" width="114" height="26"
+            <a class="main-logo"><img src="img/logo.svg" width="114" height="26"
                     alt="Логотип Техномарт"></a>
 
             <div class="search">
@@ -123,7 +123,8 @@
                     <p>
                         <img src="img/products/Perforator_1.jpg" alt="Перфоратор BOSCH BFG 9000" width="218" height="170">
                     </p>
-                    <span class="poplar-product-item-price">25500 р.</span>
+                    <span class="product-item-price product-item-price-old">25500 р.</span>
+                    <span class="product-item-price">25500 р.</span>
                 </li>
 
                 <li>
@@ -131,7 +132,8 @@
                     <p>
                         <img src="img/products/Perforator_2.jpg" alt="Перфоратор BOSCH BFG 3000" width="218" height="170">
                     </p>
-                    <span class="poplar-product-item-price">15500 р.</span>
+                    <span class="product-item-price product-item-price-old">25500 р.</span>
+                    <span class="product-item-price">15500 р.</span>
                 </li>
 
                 <li>
@@ -139,7 +141,8 @@
                     <p>
                         <img src="img/products/Perforator_3.jpg" alt="Перфоратор BOSCH BFG 6000" width="218" height="170">
                     </p>
-                    <span class="poplar-product-item-price">25500 р.</span>
+                    <span class="product-item-price product-item-price-old">25500 р.</span>
+                    <span class="product-item-price">25500 р.</span>
                 </li>
 
                 <li>
@@ -147,7 +150,7 @@
                     <p>
                         <img src="img/products/Perforator_4.jpg" alt="Перфоратор BOSCH BFG 2000" width="218" height="170">
                     </p>
-                    <span>12500 р.</span>
+                    <span class="product-item-price">12500 р.</span>
                 </li>
             </ul>
         </section>
@@ -185,7 +188,7 @@
             </ul>
         </section>
 
-        <section class="company-features">
+        <section class="service">
             <h2>Сервисы</h2>
             <p>
                 Хороший интернет-магазин отличается от плохого не только ценами!<br>
@@ -193,9 +196,9 @@
             </p>
 
             <ul class="company-features-list">
-                <li class="company-features-item company-features-current">Доставка</li>
-                <li class="company-features-item">Гарантия</li>
-                <li class="company-features-item">Кредит</li>
+                <li class="company-features-item company-features-current"><a href="#">Доставка</a></li>
+                <li class="company-features-item"><a href="#">Гарантия</a></li>
+                <li class="company-features-item"><a href="#">Кредит</a></li>
             </ul>
 
             <section class="service-item">
@@ -270,15 +273,15 @@
     <footer class="main-footer">
         <div class="top-sub-main-footer">
             <section class="top-sub-main-footer-contacts">
-                <h2 class="visualy-hidden">Контакты</h2>
-                <a class="top-sub-main-footer-logo" href="index.html"><img src="img/logo.svg" width="69"
-                        height="12" alt="Логотип Техномарт"></a>
-                <address>
+                <h2 class="visually-hidden">Контакты</h2>
+                <a class="main-logo top-sub-main-footer-logo" href="index.html"><img src="img/logo.svg" width="114"
+                        height="26" alt="Логотип Техномарт"></a>
+                <address class="main-footer-address">
                     г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
                     <a href="tel:+78125550555">+7 (812) 555-05-55</a>
                 </address>
             </section>
-            <nav class="top-sub-main-footer-nav">
+            <nav class="main-footer-site-nav">
                 <ul>
                     <li><a href="about.html">Компания</a></li>
                     <li><a href="news.html">Новости</a></li>
@@ -287,7 +290,7 @@
                     <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
-            <nav class="top-sub-main-footer-catalog-nav">
+            <nav class="main-footer-catalog-nav">
                 <ul>
                     <li><a href="goods.html">Материалы</a></li>
                     <li><a href="technics.html">Техника</a></li>
@@ -303,7 +306,7 @@
                 Все права защищены
             </p>
 
-            <div class="bottom-sub-main-footer-social">
+            <div class="main-footer-social">
                 <ul>
                     <li><a href="#" class="social-button">Вконтакте</a></li>
                     <li><a href="#" class="social-button">Фейсбук</a></li>
@@ -311,41 +314,43 @@
                 </ul>
             </div>
 
-            <p class="bottom-sub-main-footer-feedback">
-                <b>Обратная связь:</b>
-                <a class="button" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </p>
-
-            <p class="bottom-sub-main-footer-developer">
-                <b>Разработано</b>
-                <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-            </p>
+            <div class="developer-info">
+                <p class="developer-feedback">
+                    <b>Обратная связь:</b>
+                    <a class="developer-info-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                </p>
+    
+                <p class="developer-site">
+                    <b>Разработано</b>
+                    <a class="developer-info-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+                </p>
+            </div>
         </div>
     </footer>
 
     <div class="dialog">
         <section class="map">
-            <h2 class="visualy-hidden">Карта</h2>
+            <h2 class="visually-hidden">Карта</h2>
             <img src="img/big-map.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="940" height="446">
             <button type="button">Закрыть карту</button>
         </section>
     </div>
 
     <div class="dialog">
-        <section class="feedback">
-            <h2 class="visualy-hidden">Форма связи</h2>
+        <section class="feedback-form">
+            <h2 class="visually-hidden">Форма связи</h2>
             <form action="https://echo.htmlacademy.ru" method="POST">
                 <div>
-                    <label for="feedback-user-name">Ваше имя:</label>
-                    <input id="feedback-user-name" name="name" type="text" placeholder="Имя фамилия"></div>
+                    <label class="feed-back-form-label" for="feedback-form-user-name">Ваше имя:</label>
+                    <input class="feed-back-form-input" id="feedback-form-user-name" name="name" type="text" placeholder="Имя фамилия"></div>
                 <div>
-                    <label for="feedback-email">Ваш e-mail</label>
-                    <input id="feedback-email" name="email" type="text" placeholder="email@example.com"></div>
+                    <label class="feed-back-form-label" for="feedback-form-email">Ваш e-mail</label>
+                    <input class="feed-back-form-input" id="feedback-form-email" name="email" type="text" placeholder="email@example.com"></div>
                 <div>
-                    <label for="feedback-message-text">Текст письма:</label>
-                    <textarea id="feedback-message-text" name="message" placeholder="В свободной форме"></textarea>
+                    <label class="feed-back-form-label" for="feedback-form-message-text">Текст письма:</label>
+                    <textarea class="feed-back-form-input" id="feedback-form-message-text" name="message" placeholder="В свободной форме"></textarea>
                 </div>
-                <button type="submit">Отправить</button>
+                <div class="send-form-footer"><button class="button" type="submit">Отправить</button></div>
             </form>
             <button type="button">Закрыть форму</button>
         </section>
