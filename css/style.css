@@ -30,6 +30,14 @@ a{
     color: white;
 }
 
+.button:hover{
+    background-color: #ca2c37;
+}
+
+.button:active{
+    background-color: #ba2732;
+}
+
 .main-header{
     background-image: url(../img/header-background.jpg);
     background-color: #f1f5f7;
@@ -115,6 +123,10 @@ a:active{
     color: black;
 }
 
+.search-input:focus::placeholder{
+    color: black;
+}
+
 .main-header h1{
     color: #ee3643;
     font-size: 16px;
@@ -168,6 +180,19 @@ a:active{
     box-shadow: inset 0px -4.5px 0 0 #293449;
 }
 
+.site-nav li:hover{
+    background-color: #293449; 
+}
+
+.site-nav li:active{
+    background-color: #1d2739;
+}
+
+.site-nav a:active{
+    color: #a1a4a8;
+}
+
+
 .promo-item h3{
     font-size: 24px;
     line-height: 30px;
@@ -177,6 +202,14 @@ a:active{
     font-size: 14px;
     line-height: 18px;
     background: rgba(0, 0, 0, 0.1);
+}
+
+.promo-item a:hover{
+    background-color: rgba(204, 204, 204, 0.2);
+}
+
+.promo-item a:active{
+    background-color: rgba(178, 178, 178, 0.3);
 }
   
 
@@ -223,6 +256,10 @@ a:active{
     line-height: 24px;
 }
 
+.popular li{
+    border: 1px solid #eaeaea;
+}
+
 .popular-header{
     background-color: #f9f5f0;
 }
@@ -251,9 +288,16 @@ a:active{
     text-decoration: line-through;
 }
 
-.popular li{
-    border: 1px solid #eaeaea;
+.popular-manufacturer-list li:hover{
+    box-shadow: 0px 10px 25px 0px rgba(41, 52, 73, 0.5);
 }
+
+.popular-manufacturer-list li:active{
+    opacity: 0.3;
+    box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+
 
 .service{
     background-image: url(../img/services/background.jpg);
@@ -263,6 +307,7 @@ a:active{
     text-transform: uppercase;
     font-weight: normal;
 }
+
 
 .service h2{
     font-size: 30px;
@@ -287,10 +332,21 @@ a:active{
     font-weight: bold;
 }
 
+.company-features-item:hover{
+    background-color: #293449;
+}
+
+.company-features-item.company-features-current{
+    background-color: white;
+}
+
+.company-features-current a{
+    color: #32425c;
+}
+
 .company-info{
     color: black;
 }
-
 
 .company-info h2{
     text-transform: uppercase;
@@ -317,9 +373,24 @@ a:active{
     background-color: #293449;
 }
 
+.main-footer-nav a:hover{
+    text-decoration: underline;
+}
+
+.main-footer-catalog-nav a:active{
+    color: #ad956f;
+    text-decoration: none;
+}
+
+.main-footer-site-nav a:active{
+    color: #a4abb4;
+    text-decoration: none;
+}
+
 .main-footer-catalog-nav a{
     color: #ffd180;
 }
+
 
 .main-footer-address{
     font-style: normal;
@@ -334,8 +405,21 @@ a:active{
     background-color: #212a3a;
 }
 
+.social-button:hover{
+    background-color: #ee3643;
+}
+
 .developer-info-link{
     color: #f5c97d;
+}
+
+.developer-info-link:hover{
+    text-decoration: underline;
+}
+
+.developer-info-link:active{
+    text-decoration: none;
+    color: #d13644;
 }
 
 .feed-back-form-label{
