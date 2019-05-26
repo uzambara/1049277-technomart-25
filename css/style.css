@@ -4,6 +4,13 @@ body{
     padding: 0;
 }
 
+.container{
+    width: 960px;
+    padding: 0 10px;
+    margin: 0 auto;
+    height: 100%;
+}
+
 ul{
     list-style: none;
 }
@@ -48,8 +55,10 @@ a{
     background-color: #f1f5f7;
 }
 
-.main-header h1{
-    font-weight: normal;
+/* #region Header Interface */
+
+.main-header-interface .container{
+    display: flex;
 }
 
 .main-header-interface{
@@ -57,6 +66,8 @@ a{
     font-size: 17px;
     line-height: 18px;
     color: white;
+
+    height: 42px;
 }
 
 .main-header-interface 
@@ -76,6 +87,9 @@ a:active{
     line-height: 18px;
     color: white;
     font-family: Cuprum;
+    width: 270px;
+    height: 100%;
+    padding-left: 17px;
 }
 
 .search-input::placeholder{
@@ -84,8 +98,20 @@ a:active{
     line-height: 18px;
 }
 
+.bookmarks,
+.cart,
+.make-order-link{
+    flex-grow: 1;
+    padding-left: 18px;
+    display: flex;
+    align-items: center;
+}
+
+
+
 .make-order-link {
     background-color: #63a63e;
+    justify-content: space-around;
 }
 
 .main-header-interface 
@@ -101,7 +127,7 @@ a:active{
 .main-logo{
     background-color: #ee3643;
     width: 220px;
-    height: 51px;
+    height: 47px;
     box-shadow: inset 0px -4.5px 0 0 rgba(0, 0, 0, 0.24);
     text-align: center;
     display: block;
@@ -135,15 +161,28 @@ a:active{
 .search-input:focus::placeholder{
     color: black;
 }
+/* #endregion Header Interface */
+
+/* #region Address and user nav */
+.header-wrapper{
+    display: flex;
+    height: 112px;
+    margin-top: 47px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
 
 .main-header h1{
     color: #ee3643;
     font-size: 16px;
     line-height: 23px;
     font-style: italic;
+    font-weight: normal;
+    width: 250px;
+    padding-left: 50px;
 }
 
-.main-header 
+.header-wrapper
 address{
     font-style: normal;
 }
@@ -152,17 +191,51 @@ address{
     color: #ee3643;
     font-size: 21px;
     line-height: 21px;
+    display:block;
+
+    padding-left: 80px;
+    width: 190px;
+    height: 45px;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
 }
 
 .main-header-contacts-address{
-    color: black;
+    color: #32425c;
     font-size: 14px;
     line-height: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+.user-nav ul{
+    display: flex;
+    margin: 0;
+}
+
+.login-link{
+    width: 120px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.register-link{
+    width: 150px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .user-nav 
 li{
     background-color: white;
+    margin-left: 10px;
 }
 
 .user-nav 
@@ -182,12 +255,34 @@ a:active{
     color: #cacaca;
 }
 
+/* #endregion Address and user nav */
+
 .site-nav{
     background-color: #32425c;
     font-size: 17px;
     line-height: 17px;
     box-shadow: inset 0px -4.5px 0 0 #293449;
+    height: 60px;
 }
+
+.site-nav ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+
+.site-nav li{
+    height: 100%;
+    padding: 0 30px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+
 
 .site-nav li:hover{
     background-color: #293449; 

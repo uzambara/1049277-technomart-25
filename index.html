@@ -17,52 +17,59 @@
 
         <!-- ПОИСК, ЗАКЛАДКИ, КОРЗИНА, ОФОРМИТЬ ЗАКАЗ -->
         <div class="main-header-interface">
-
-            <a class="main-logo"><img src="img/logo.svg" width="114" height="26"
-                    alt="Логотип Техномарт"></a>
-
-            <div class="search">
-                <input type="search" class="search-input" placeholder="Поиск:">               
+            <div class="container"> 
+                <a class="main-logo"><img src="img/logo.svg" width="114" height="26"
+                        alt="Логотип Техномарт"></a>
+    
+                <div class="search">
+                    <input type="search" class="search-input" placeholder="Поиск:">               
+                </div>
+    
+                <a class="bookmarks" href="bookmarks.html">
+                    Закладки:
+                    <span class="bookmarks-count">0</span>
+                </a>
+    
+                <a class="cart" href="cart.html">
+                    Корзина:
+                    <span class="cart-items-count">0</span>
+                </a>
+    
+                <a class="make-order-link" href="make-order.html">Оформить заказ</a>
             </div>
-
-            <a class="bookmarks" href="bookmarks.html">
-                Закладки:
-                <span class="bookmarks-count">0</span>
-            </a>
-
-            <a class="cart" href="cart.html">
-                Корзина:
-                <span class="cart-items-count">0</span>
-            </a>
-
-            <a class="make-order-link" href="make-order.html">Оформить заказ</a>
         </div>
 
         <div class="container">
-            <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-            <address class="main-header-contacts">
-                <a href="tel:+78125550555" class="main-header-contacts-phone">+7(812)555-05-55</a><br>
-                <p class="main-header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-            </address>
-            <nav class="user-nav">
+            <div class="header-wrapper">
+                <h1>
+                    Интернет-магазин<br> 
+                    строительных материалов<br> 
+                    и инструментов для ремонта
+                </h1>
+                <address class="main-header-contacts">
+                    <a href="tel:+78125550555" class="main-header-contacts-phone">+7(812)555-05-55</a>
+                    <p class="main-header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                </address>
+                <nav class="user-nav">
+                    <ul>
+                        <li><a class="login-link" href="login.html">Войти</a></li>
+                        <li><a class="register-link" href="register.html">Регистрация</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <nav class="site-nav">
                 <ul>
-                    <li><a href="login.html">Войти</a></li>
-                    <li><a href="register.html">Регистрация</a></li>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">Компания</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="special-offers.html">Спецпредложения</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
-
-        <nav class="container site-nav">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">Компания</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="special-offers.html">Спецпредложения</a></li>
-                <li><a href="delivery.html">Доставка</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- MAIN -->
