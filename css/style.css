@@ -29,8 +29,10 @@ a{
     line-height: 18px;
     background-color: #ee3643;
     color: white;
+    text-align: center;
     font-family: inherit;
     text-transform: uppercase;
+    border: none;
 }
 
 .button:hover{
