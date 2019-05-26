@@ -17,24 +17,23 @@
 
         <!-- ПОИСК, ЗАКЛАДКИ, КОРЗИНА, ОФОРМИТЬ ЗАКАЗ -->
         <div class="main-header-interface">
-            <div class="container"> 
-                <a class="main-logo"><img src="img/logo.svg" width="114" height="26"
-                        alt="Логотип Техномарт"></a>
-    
+            <div class="container">
+                <a class="main-logo"><img src="img/logo.svg" width="114" height="26" alt="Логотип Техномарт"></a>
+
                 <div class="search">
-                    <input type="search" class="search-input" placeholder="Поиск:">               
+                    <input type="search" class="search-input" placeholder="Поиск:">
                 </div>
-    
+
                 <a class="bookmarks" href="bookmarks.html">
                     Закладки:
                     <span class="bookmarks-count">0</span>
                 </a>
-    
+
                 <a class="cart" href="cart.html">
                     Корзина:
                     <span class="cart-items-count">0</span>
                 </a>
-    
+
                 <a class="make-order-link" href="make-order.html">Оформить заказ</a>
             </div>
         </div>
@@ -42,8 +41,8 @@
         <div class="container">
             <div class="header-wrapper">
                 <h1>
-                    Интернет-магазин<br> 
-                    строительных материалов<br> 
+                    Интернет-магазин<br>
+                    строительных материалов<br>
                     и инструментов для ремонта
                 </h1>
                 <address class="main-header-contacts">
@@ -57,7 +56,7 @@
                     </ul>
                 </nav>
             </div>
-    
+
             <nav class="site-nav">
                 <ul>
                     <li><a href="index.html">Главная</a></li>
@@ -271,7 +270,9 @@
                 <p>Вы можете забрать товар сами,<br>
                     заехав в наш офис:</p>
                 <p class="company-info-contacts-map">
-                    <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323055%2C59.938631&mode=search&sll=56.229398%2C58.010374&sspn=0.493011%2C0.148878&text=%D0%B3.%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%83%D0%BB.%20%D0%91.%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%2C%20%D0%B4.%2019%2F8&z=17"><img src="img/map.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158"></a>
+                    <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323055%2C59.938631&mode=search&sll=56.229398%2C58.010374&sspn=0.493011%2C0.148878&text=%D0%B3.%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%83%D0%BB.%20%D0%91.%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%2C%20%D0%B4.%2019%2F8&z=17">
+                        <img src="img/map.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300"
+                            height="158"></a>
                 </p>
                 <a class="button" href="contact-us.html">Заблудились? Напишите нам!</a>
             </section>
@@ -280,7 +281,7 @@
 
     <!-- FOOTER -->
     <footer class="main-footer">
-        <div class="top-sub-main-footer">
+        <div class="container top-sub-main-footer">
             <section class="top-sub-main-footer-contacts">
                 <h2 class="visually-hidden">Контакты</h2>
                 <a class="main-logo top-sub-main-footer-logo" href="index.html"><img src="img/logo.svg" width="114"
@@ -290,49 +291,65 @@
                     <a href="tel:+78125550555">+7 (812) 555-05-55</a>
                 </address>
             </section>
-            <nav class="main-footer-nav main-footer-site-nav">
-                <ul>
-                    <li><a href="about.html">Компания</a></li>
-                    <li><a href="news.html">Новости</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="delivery.html">Доставка</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                </ul>
-            </nav>
-            <nav class="main-footer-nav main-footer-catalog-nav">
-                <ul>
-                    <li><a href="goods.html">Материалы</a></li>
-                    <li><a href="technics.html">Техника</a></li>
-                    <li><a href="tools.html">Инструмент</a></li>
-                    <li><a href="spec-offer.html">Спецпредложение</a></li>
-                </ul>
-            </nav>
+            <div class="footer-nav-wrapper">
+                <nav class="main-footer-nav main-footer-site-nav">
+                    <ul>
+                        <li><a href="about.html">Компания</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <nav class="main-footer-nav main-footer-catalog-nav">
+                    <ul>
+                        <li><a href="goods.html">Материалы</a></li>
+                        <li><a href="technics.html">Техника</a></li>
+                        <li><a href="tools.html">Инструмент</a></li>
+                        <li><a href="spec-offer.html">Спецпредложение</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
 
         <div class="bottom-sub-main-footer">
-            <p class="main-footer-copyrights">
-                © 2010–2019 Компания «Техномарт»<br>
-                Все права защищены
-            </p>
-
-            <div class="main-footer-social">
-                <ul>
-                    <li><a href="#" class="social-button">Вконтакте</a></li>
-                    <li><a href="#" class="social-button">Фейсбук</a></li>
-                    <li><a href="#" class="social-button">Инстаграм</a></li>
-                </ul>
-            </div>
-
-            <div class="developer-info">
-                <p class="developer-feedback">
-                    <b>Обратная связь:</b>
-                    <a class="developer-info-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <div class="container">
+                <p class="main-footer-copyrights">
+                    © 2010–2019 Компания «Техномарт»<br>
+                    Все права защищены
                 </p>
     
-                <p class="developer-site">
-                    <b>Разработано</b>
-                    <a class="developer-info-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-                </p>
+                <div class="main-footer-social">
+                    <ul>
+                        <li>
+                            <a href="#" class="social-button" aria-label="Вконтакте">
+                                <img src="img/social/vk.svg" alt="Вконтакте" width="26" height="15">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-button" aria-label="Фейсбук">
+                                <img src="img/social/facebook.svg" alt="Вконтакте" width="26" height="15">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-button" aria-label="Инстаграм">
+                                <img src="img/social/instagram.svg" alt="Вконтакте" width="26" height="15">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="developer-info">
+                    <p class="developer-feedback">
+                        Обратная связь:<br>
+                        <a class="developer-info-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                    </p>
+    
+                    <p class="developer-site">
+                        Разработано<br>
+                        <a class="developer-info-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>

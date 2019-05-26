@@ -135,8 +135,10 @@ a:active{
     width: 220px;
     height: 47px;
     box-shadow: inset 0px -4.5px 0 0 rgba(0, 0, 0, 0.24);
-    text-align: center;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
 }
 
 .main-header-interface 
@@ -511,6 +513,48 @@ a:active{
     color: white;
 }
 
+.top-sub-main-footer{
+    display: flex;
+}
+
+.top-sub-main-footer-logo{
+    margin-bottom: 30px;
+    width: 220px;
+    height: 68px;
+}
+
+.footer-nav-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.main-footer-site-nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+
+}
+
+.main-footer-catalog-nav ul{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 25px;
+    margin: 0;
+}
+
+.main-footer-nav{
+    padding: 20px 0;
+}
+
+.top-sub-main-footer-contacts{
+    width: 380px;
+    height: 196px;
+}
+
 .bottom-sub-main-footer{
     background-color: #293449;
 }
@@ -538,14 +582,36 @@ a:active{
     font-style: normal;
 }
 
-.bottom-sub-main-footer{
+.bottom-sub-main-footer .container{
     font-size: 16px;
     line-height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-footer-social ul{
+    display: flex;
+}
+
+.developer-info{
+    display: flex;
+}
+
+.developer-info p{
+    margin-left: 75px;
 }
 
 .social-button{
     background-color: #212a3a;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .social-button:hover{
     background-color: #ee3643;
