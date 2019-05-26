@@ -48,6 +48,10 @@ a{
     background-color: #f1f5f7;
 }
 
+.main-header h1{
+    font-weight: normal;
+}
+
 .main-header-interface{
     background-color: #293449;
     font-size: 17px;
