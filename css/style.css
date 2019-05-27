@@ -214,6 +214,7 @@ address{
     border: 3px solid white;
     display: flex;
     align-items: center;
+    margin-bottom: 4px;
 }
 
 .main-header-contacts-address{
@@ -662,15 +663,39 @@ a:active{
 
 
 /* #region Catalog.html */
+.current-user-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
 .current-user a{
     color: #000000;
     background-color: #ffffff;
     font-size: 21px;
     line-height: 21px;
+    width: 300px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .current-user a:active{
     color: #cacaca;
+}
+
+.autorized-user-nav ul{
+    padding: 0;
+}
+
+.autorized-user-nav li{
+    margin: 11px 20px 15px 18px;
+}
+
+.autorized-user-nav li:last-child{
+    list-style-type: disc;
+    color: #32425c;
+    padding-left: 8px;
 }
 
 .autorized-user-nav a{
@@ -678,6 +703,8 @@ a:active{
     font-size: 16px;
     line-height: 18px;
     color: #32425c;
+    padding-left: 0;
+    margin-left: 0;
 }
 .autorized-user-nav a{
     background-color: transparent;
