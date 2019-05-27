@@ -10,7 +10,7 @@ ul{
 
 a{
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
 .visually-hidden{
@@ -28,7 +28,7 @@ a{
     font-size: 14px;
     line-height: 18px;
     background-color: #ee3643;
-    color: white;
+    color: #ffffff;
     text-align: center;
     font-family: inherit;
     text-transform: uppercase;
@@ -59,7 +59,7 @@ a{
     background-color: #293449;
     font-size: 17px;
     line-height: 18px;
-    color: white;
+    color: #ffffff;
 }
 
 .main-header-interface 
@@ -77,12 +77,12 @@ a:active{
     border: none;
     font-size: 17px;
     line-height: 18px;
-    color: white;
+    color: #ffffff;
     font-family: Cuprum, sans-serif;
 }
 
 .search-input::placeholder{
-    color: white;
+    color: #ffffff;
     font-size: 17px;
     line-height: 18px;
 }
@@ -136,11 +136,11 @@ a:active{
     border: none;
     font-size: 17px;
     line-height: 18px;
-    color: black;
+    color: #000000;
 }
 
 .search-input:focus::placeholder{
-    color: black;
+    color: #000000;
 }
 
 .main-header h1{
@@ -162,19 +162,19 @@ address{
 }
 
 .main-header-contacts-address{
-    color: black;
+    color: #000000;
     font-size: 14px;
     line-height: 24px;
 }
 
 .user-nav 
 a{
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .user-nav 
 a{
-    color: black;
+    color: #000000;
     font-size: 21px;
     line-height: 21px;
 }
@@ -212,7 +212,7 @@ a:active{
 .promo-item h3{
     font-size: 24px;
     line-height: 30px;
-    color: white;
+    color: #ffffff;
 }
 
 .promo-item a{
@@ -247,7 +247,7 @@ a:active{
 }
 
 .promo-slider{
-    color: white;
+    color: #ffffff;
 }
 
 .promo-slider-drill{
@@ -306,7 +306,7 @@ a:active{
 }
 
 .product-card-title{
-    color: black;
+    color: #000000;
     line-height: 18px;
     font-size: 20px;
     text-transform: none;
@@ -317,7 +317,7 @@ a:active{
     background-color: #ee3643;
     font-size: 17px;
     line-height: 18px;
-    color: white;
+    color: #ffffff;
     font-family: "PT Sans", sans-serif;
 }
 
@@ -358,13 +358,13 @@ a:active{
 .service h2{
     font-size: 30px;
     line-height: 30px;
-    color: black;
+    color: #000000;
 }
 
 .service-item p{
     font-size: 13px;
     line-height: 24px;
-    color: black;
+    color: #000000;
     font-family: "PT Sans", sans-serif;
 }
 
@@ -384,7 +384,7 @@ a:active{
 }
 
 .company-features-item.company-features-current{
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .company-features-current a{
@@ -392,7 +392,7 @@ a:active{
 }
 
 .company-info{
-    color: black;
+    color: #000000;
 }
 
 .company-info h2{
@@ -414,7 +414,7 @@ a:active{
 
 .main-footer{
     background-color: #32425c;
-    color: white;
+    color: #ffffff;
 }
 
 .bottom-sub-main-footer{
@@ -471,7 +471,7 @@ a:active{
 }
 
 .feed-back-form-label{
-    color: black;
+    color: #000000;
     font-size: 18px;
     line-height: 18px;
 }
@@ -488,7 +488,7 @@ a:active{
 
 /* #region Catalog.html */
 .current-user a{
-    color: black;
+    color: #000000;
     background-color: #ffffff;
     font-size: 21px;
     line-height: 21px;
@@ -515,7 +515,7 @@ a:active{
 
 .breadcrumbs li a,
 .breadcrumbs li{
-    color: black;
+    color: #000000;
     text-transform: uppercase;
     font-size: 13px;
     line-height: 18px;
@@ -537,7 +537,7 @@ a:active{
 }
 
 .product-card-bookmark-link{
-    color: black;
+    color: #000000;
     border: 3px solid #63a63e;
     font-size: 14px;
     line-height: 18px;
