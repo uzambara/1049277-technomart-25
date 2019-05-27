@@ -715,6 +715,24 @@ a:active{
     font-family: "PT Sans", sans-serif;
 }
 
+.breadcrumbs ul{
+    display: flex;
+    list-style-image: url(../img/breadcrumbs-list-style-img.png);
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.breadcrumbs li{
+    padding-left: 8px;
+    padding-right: 30px;
+}
+
+.breadcrumbs li:first-child{
+    list-style: none;
+    padding-left: 0;
+    padding-right: 30px;
+}
+
 .breadcrumbs li a,
 .breadcrumbs li{
     color: #000000;
