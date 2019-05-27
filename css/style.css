@@ -46,6 +46,9 @@ a{
 .main-header{
     background-image: url(../img/header-background.jpg);
     background-color: #f1f5f7;
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 100%;
 }
 
 .main-header h1{
@@ -75,13 +78,17 @@ a:active{
     font-size: 17px;
     line-height: 18px;
     color: white;
-    font-family: Cuprum;
+    font-family: Cuprum, sans-serif;
 }
 
 .search-input::placeholder{
     color: white;
     font-size: 17px;
     line-height: 18px;
+}
+
+.cart-with-products{
+    background-color: #ee3643;
 }
 
 .make-order-link {
@@ -161,7 +168,7 @@ address{
 }
 
 .user-nav 
-li{
+a{
     background-color: white;
 }
 
@@ -245,12 +252,18 @@ a:active{
 
 .promo-slider-drill{
     background-image: url(../img/slider/drill.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
     width: 620px;
     height: 266px;
 }
 
 .promo-slider-perforator{
     background-image: url(../img/slider/perforator.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
     width: 620px;
     height: 266px;
 }
@@ -476,6 +489,7 @@ a:active{
 /* #region Catalog.html */
 .current-user a{
     color: black;
+    background-color: #ffffff;
     font-size: 21px;
     line-height: 21px;
 }
@@ -490,13 +504,17 @@ a:active{
     line-height: 18px;
     color: #32425c;
 }
+.autorized-user-nav a{
+    background-color: transparent;
+}
 
 
 .breadcrumbs{
     font-family: "PT Sans", sans-serif;
 }
 
-.breadcrumbs li a{
+.breadcrumbs li a,
+.breadcrumbs li{
     color: black;
     text-transform: uppercase;
     font-size: 13px;
