@@ -415,8 +415,8 @@ a:active{
 
 .product-card-title{
     color: #000000;
-    line-height: 18px;
-    font-size: 20px;
+    line-height: 20px;
+    font-size: 18px;
     text-transform: none;
     font-family: "PT Sans", sans-serif;
 }
@@ -739,6 +739,33 @@ a:active{
     text-transform: uppercase;
     font-size: 13px;
     line-height: 18px;
+}
+
+.product h2{
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    color: #32425c;
+    background-color: #f2f6f8;
+    height: 89px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.product-wrapper{
+    display:flex;
+}
+
+.product-catalog ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card{
+    width: 220px;
+    height: 318px;
 }
 
 .product-card-buy-link{
