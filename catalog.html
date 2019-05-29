@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,49 +17,52 @@
 
         <!-- ПОИСК, ЗАКЛАДКИ, КОРЗИНА, ОФОРМИТЬ ЗАКАЗ -->
         <div class="main-header-interface">
-            <a class="main-logo" href="index.html"><img src="img/logo.svg" width="114"
-                    height="26"
-                    alt="Логотип Техномарт"></a>
 
-            <div class="search">
-                <input type="text" class="search-input" placeholder="Поиск:">
+            <div class="container">
+                <a class="main-logo"><img src="img/logo.svg" width="114" height="26" alt="Логотип Техномарт"></a>
+
+                <div class="header-interface-wrapper">
+                    <div class="search">
+                        <input type="search" class="search-input" placeholder="Поиск:">
+                    </div>
+
+                    <a class="bookmarks" href="bookmarks.html">
+                        Закладки:
+                        <span class="bookmarks-count">0</span>
+                    </a>
+
+                    <a class="cart" href="cart.html">
+                        Корзина:
+                        <span class="cart-items-count">0</span>
+                    </a>
+
+                    <a class="make-order-link" href="make-order.html">Оформить заказ</a>
+                </div>
             </div>
-
-            <a class="bookmarks" href="bookmarks.html">
-                Закладки:
-                <span class="bookmarks-count">0</span>
-            </a>
-
-            <a class="cart cart-with-products" href="cart.html">
-                Корзина:
-                <span class="cart-items-count">10</span>
-            </a>
-
-            <a class="make-order-link" href="make-order.html">Оформить заказ</a>
         </div>
 
-        <div class="container">
-            <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+        <div class="container address-container">
+            <h1>Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
             <address class="main-header-contacts">
                 <a href="tel:+78125550555" class="main-header-contacts-phone">+7(812)555-05-55</a><br>
-                <p class="main-header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная,
-                    д. 19/8</p>
+                <p class="main-header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </address>
+
 
             <div class="current-user">
                 <a href="#">Равшан джамшутович</a>
+                <nav class="user-nav autorized-user-nav">
+                    <ul>
+                        <li><a href="my-orders.html">Мои заказы</a></li>
+                        <li><a href="pesonal-account.html">Личный кабинет</a></li>
+                    </ul>
+                </nav>
             </div>
-
-            <nav class="user-nav autorized-user-nav">
-                <ul>
-                    <li><a href="my-orders.html">Мои заказы</a></li>
-                    <li><a href="pesonal-account.html">Личный кабинет</a></li>
-                </ul>
-            </nav>
+        </div>
         </div>
 
-        <nav class="container site-nav">
-            <ul>
+        <nav class="container">
+            <ul class="site-nav">
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="about.html">Компания</a></li>
                 <li><a href="catalog.html">Каталог</a></li>
@@ -70,6 +73,7 @@
             </ul>
         </nav>
     </header>
+
 
     <!-- MAIN -->
     <main class="container">
@@ -148,8 +152,8 @@
 
                         <div class="product-card-buy-wrapper">
                             <p class="product-card-image">
-                                <img src="img/products/Perforator_2.jpg"
-                                    alt="Перфоратор BOSCH BFG 3000" width="218" height="170">
+                                <img src="img/products/Perforator_2.jpg" alt="Перфоратор BOSCH BFG 3000" width="218"
+                                    height="170">
                             </p>
 
                             <a class="product-card-buy-link" href="cart.html">Купить</a>
@@ -162,9 +166,9 @@
                     <li class="product-card">
                         <h4 class="product-card-title">Перфоратор BOSCH BFG 6000</h4>
                         <div class="product-card-buy-wrapper">
-                            <p class="product-card-image"> 
-                                <img src="img/products/Perforator_3.jpg"
-                                    alt="Перфоратор BOSCH BFG 6000" width="218" height="170">
+                            <p class="product-card-image">
+                                <img src="img/products/Perforator_3.jpg" alt="Перфоратор BOSCH BFG 6000" width="218"
+                                    height="170">
                             </p>
 
                             <a class="product-card-buy-link" href="cart.html">Купить</a>
@@ -178,8 +182,8 @@
                         <h4 class="product-card-title">Перфоратор BOSCH BFG 2000</h4>
                         <div class="product-card-buy-wrapper">
                             <p class="product-card-image">
-                                <img src="img/products/Perforator_4.jpg"
-                                    alt="Перфоратор BOSCH BFG 2000" width="218" height="170">
+                                <img src="img/products/Perforator_4.jpg" alt="Перфоратор BOSCH BFG 2000" width="218"
+                                    height="170">
                             </p>
 
                             <a class="product-card-buy-link" href="cart.html">Купить</a>
@@ -193,8 +197,8 @@
 
                         <div class="product-card-buy-wrapper">
                             <p class="product-card-image">
-                                <img src="img/products/Perforator_2.jpg"
-                                    alt="Перфоратор BOSCH BFG 3000" width="218" height="170">
+                                <img src="img/products/Perforator_2.jpg" alt="Перфоратор BOSCH BFG 3000" width="218"
+                                    height="170">
                             </p>
 
                             <a class="product-card-buy-link" href="cart.html">Купить</a>
@@ -208,8 +212,8 @@
                         <h4 class="product-card-title">Перфоратор BOSCH BFG 6000</h4>
                         <div class="product-card-buy-wrapper">
                             <p class="product-card-image">
-                                <img src="img/products/Perforator_3.jpg"
-                                    alt="Перфоратор BOSCH BFG 6000" width="218" height="170">
+                                <img src="img/products/Perforator_3.jpg" alt="Перфоратор BOSCH BFG 6000" width="218"
+                                    height="170">
                             </p>
 
                             <a class="product-card-buy-link" href="cart.html">Купить</a>
@@ -223,8 +227,8 @@
                         <h4 class="product-card-title">Перфоратор BOSCH BFG 2000</h4>
                         <div class="product-card-buy-wrapper">
                             <p class="product-card-image">
-                                <img src="img/products/Perforator_4.jpg"
-                                    alt="Перфоратор BOSCH BFG 2000" width="218" height="170">
+                                <img src="img/products/Perforator_4.jpg" alt="Перфоратор BOSCH BFG 2000" width="218"
+                                    height="170">
                             </p>
 
                             <a class="product-card-buy-link" href="cart.html">Купить</a>
@@ -237,8 +241,8 @@
 
                         <div class="product-card-buy-wrapper">
                             <p class="product-card-image">
-                                <img src="img/products/Perforator_2.jpg"
-                                    alt="Перфоратор BOSCH BFG 3000" width="218" height="170">
+                                <img src="img/products/Perforator_2.jpg" alt="Перфоратор BOSCH BFG 3000" width="218"
+                                    height="170">
                             </p>
 
                             <a class="product-card-buy-link" href="cart.html">Купить</a>
@@ -252,8 +256,8 @@
                         <h4 class="product-card-title">Перфоратор BOSCH BFG 6000</h4>
                         <div class="product-card-buy-wrapper">
                             <p class="product-card-image">
-                                <img src="img/products/Perforator_3.jpg"
-                                    alt="Перфоратор BOSCH BFG 6000" width="218" height="170">
+                                <img src="img/products/Perforator_3.jpg" alt="Перфоратор BOSCH BFG 6000" width="218"
+                                    height="170">
                             </p>
 
                             <a class="product-card-buy-link" href="cart.html">Купить</a>
@@ -268,8 +272,8 @@
                         <h4 class="product-card-title">Перфоратор BOSCH BFG 2000</h4>
                         <div class="product-card-buy-wrapper">
                             <p class="product-card-image">
-                                <img src="img/products/Perforator_4.jpg"
-                                    alt="Перфоратор BOSCH BFG 2000" width="218" height="170">
+                                <img src="img/products/Perforator_4.jpg" alt="Перфоратор BOSCH BFG 2000" width="218"
+                                    height="170">
                             </p>
 
                             <a class="product-card-buy-link" href="cart.html">Купить</a>
@@ -304,19 +308,17 @@
 
     <!-- FOOTER -->
     <footer class="main-footer">
-        <div class="top-sub-main-footer">
-            <!-- ширина этого блока равна содержимому, но цветной фон намного шире, поэтому дополнительно оборачиваю в container -->
-            <div class="container">
-                <div class="top-sub-main-footer-contacts">
-                    <h2 class="visually-hidden">Контакты</h2>
-                    <a class="main-logo top-sub-main-footer-logo" href="index.html"><img
-                            src="img/logo.svg" width="114" height="26" alt="Логотип
-                            Техномарт"></a>
-                    <address class="main-footer-address">
-                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-                        <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-                    </address>
-                </div>
+        <div class="container top-sub-main-footer">
+            <section class="top-sub-main-footer-contacts">
+                <h2 class="visually-hidden">Контакты</h2>
+                <a class="main-logo top-sub-main-footer-logo" href="index.html"><img src="img/logo.svg" width="114"
+                        height="26" alt="Логотип Техномарт"></a>
+                <address class="main-footer-address">
+                    г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+                    <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+                </address>
+            </section>
+            <div class="footer-nav-wrapper">
                 <nav class="main-footer-nav main-footer-site-nav">
                     <ul>
                         <li><a href="about.html">Компания</a></li>
@@ -337,9 +339,7 @@
             </div>
         </div>
 
-        <!-- оборачиваем для того, что бы задать цвет фона футера, который во всю ширину монитора -->
         <div class="bottom-sub-main-footer">
-            <!-- ширина этого блока равна содержимому, но цветной фон намного шире, поэтому дополнительно оборачиваю в container -->
             <div class="container">
                 <p class="main-footer-copyrights">
                     © 2010–2019 Компания «Техномарт»<br>
@@ -348,28 +348,40 @@
 
                 <div class="main-footer-social">
                     <ul>
-                        <li><a href="#" class="social-button">Вконтакте</a></li>
-                        <li><a href="#" class="social-button">Фейсбук</a></li>
-                        <li><a href="#" class="social-button">Инстаграм</a></li>
+                        <li>
+                            <a href="#" class="social-button social-vkontakte" aria-label="Вконтакте">
+                                <img src="img/social/vk.svg" alt="Вконтакте" width="26" height="15">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-button social-facebook" aria-label="Фейсбук">
+                                <img src="img/social/facebook.svg" alt="Фэйсбук" width="12" height="22">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-button social-instagram" aria-label="Инстаграмм">
+                                <img src="img/social/instagram.svg" alt="Инстаграмм" width="21" height="21">
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="developer-info">
                     <p class="developer-feedback">
-                        <b>Обратная связь:</b>
-                        <a class="button" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                        <b>Обратная связь:</b><br>
+                        <a class="developer-info-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
                     </p>
-    
+
                     <p class="developer-site">
-                        <b>Разработано</b>
-                        <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML
-                            Academy</a>
+                        <b>Разработано</b><br>
+                        <a class="developer-info-link"
+                            href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
                     </p>
                 </div>
             </div>
         </div>
     </footer>
-    
+
     <div class="dialog">
         <h2 class="visually-hidden">Сообщение о покупке</h2>
         <p>Товар добавлен в корзину</p>
@@ -380,4 +392,5 @@
         <button type="button">Закрыть форму</button>
     </div>
 </body>
+
 </html>
