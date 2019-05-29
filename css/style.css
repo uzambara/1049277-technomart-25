@@ -1,7 +1,12 @@
+/* #region Common */
 body{
     font-family: Cuprum, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+body *{
+    box-sizing: border-box;
 }
 
 ul{
@@ -43,23 +48,50 @@ a{
     background-color: #ba2732;
 }
 
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+/* #endregion Common */
+
+
+
+
+/* #region Header */
 .main-header{
     background-image: url(../img/header-background.jpg);
     background-color: #f1f5f7;
     background-repeat: repeat;
     background-position: 0 0;
     background-size: 100%;
+    min-height: 320px;
 }
 
 .main-header h1{
     font-weight: normal;
+    margin: 0px;
 }
 
+/* #region Header interface */
 .main-header-interface{
     background-color: #293449;
     font-size: 17px;
     line-height: 18px;
     color: #ffffff;
+    min-height: 42px;
+}
+
+.header-interface-wrapper{
+    width: 720px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-header-interface .container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: content;
 }
 
 .main-header-interface 
@@ -71,6 +103,7 @@ a:hover{
 a:active{
     background-color: #161d29;
 }
+
 
 .search-input{
     background-color: #293449;
@@ -108,10 +141,12 @@ a:active{
 .main-logo{
     background-color: #ee3643;
     width: 220px;
-    height: 51px;
+    height: 47px;
+    
+    display: inline-block;
+
     box-shadow: inset 0px -4.5px 0 0 rgba(0, 0, 0, 0.24);
     text-align: center;
-    display: block;
 }
 
 .main-header-interface 
@@ -143,11 +178,29 @@ a:active{
     color: #000000;
 }
 
+/* #endregion Header interface */
+
+/* #region Header address */
+.address-container{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 160px;
+    justify-content: space-between;
+}
+
+.address-container .h1,
+.address-container .main-header-contacts,
+.address-container .user-nav{
+    width: 300px;
+}
+
 .main-header h1{
     color: #ee3643;
     font-size: 16px;
     line-height: 23px;
     font-style: italic;
+    width: 300px;
+    text-align: left;
 }
 
 .main-header 
@@ -188,31 +241,79 @@ a:hover{
 a:active{
     color: #cacaca;
 }
+/* #endregion Header address */
+
+/* #region Header site navigation */
 
 .site-nav{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 60px;
     background-color: #32425c;
-    font-size: 17px;
-    line-height: 17px;
     box-shadow: inset 0px -4.5px 0 0 #293449;
 }
 
-.site-nav li:hover{
-    background-color: #293449; 
+.site-nav a{
+    width: 127px;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
 }
 
-.site-nav li:active{
+.site-nav a:hover{
+    background-color: #293449;
+}
+
+.site-nav a:active{
     background-color: #1d2739;
 }
 
 .site-nav a:active{
     color: #a1a4a8;
 }
+/* #endregion Header site navigation */
+
+/* #endregion Header */
 
 
-.promo-item h3{
+
+
+/* #region Main */
+
+
+/* #region Main promo */
+.promo-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.promo{
+    padding-bottom: 53px;
+    padding-top: 60px
+}
+
+.promo-item-header{
     font-size: 24px;
     line-height: 30px;
     color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+}
+
+.promo-item{
+    width: 300px;
+    height: 123px;
+    margin-bottom: 20px;
 }
 
 .promo-item a{
@@ -246,8 +347,19 @@ a:active{
     background-color: #8ed78f;
 }
 
+.promo-item-slider{
+    width: 620px;
+    height: 266px;
+
+}
+
 .promo-slider{
     color: #ffffff;
+}
+
+.promo-slider h3{
+    margin: 0px;
+    padding: 0px;
 }
 
 .promo-slider-drill{
@@ -282,19 +394,37 @@ a:active{
     font-size: 18px;
     line-height: 24px;
 }
+/* #endregion Main promo */
+
+
+/* #region Main popular */
+
+/* #region Main popular products */
+
+.popular ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+}
 
 .popular li{
     border: 1px solid #eaeaea;
+    width: 218px;
+    margin: 20px 0px;
 }
 
 .popular-header{
     background-color: #f9f5f0;
+    min-height: 90px;
 }
 
 .popular-header-title{
     color: #32425c;
     line-height: 30px;
     font-size: 30px;
+    margin: 0;
 }
 
 .product-card{
@@ -327,6 +457,13 @@ a:active{
     text-decoration: line-through;
     font-family: "PT Sans", sans-serif;
 }
+/* #endregion Main popular products */
+
+
+/* #region Main popular manufacturer */
+.popular-manufacturer{
+    margin-bottom: 85px;
+}
 
 .popular-manufacturer-list li:hover{
     box-shadow: 0px 10px 25px 0px rgba(41, 52, 73, 0.5);
@@ -336,11 +473,27 @@ a:active{
     opacity: 0.3;
     box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
+/* #endregion Main popular manufacturer */
 
 
+/* #endregion Main popular */
 
+
+/* #region Main services */
 .service{
     background-color: #f4f8fa;
+    min-height: 522px;
+    padding-top: 65px;
+}
+
+.service-header{
+    margin: 0;
+    padding-bottom: 25px;
+}
+
+.service-slogan{
+    padding: 0 0 75px 0;
+    margin: 0;
 }
 
 .service > p{
@@ -361,15 +514,50 @@ a:active{
     color: #000000;
 }
 
-.service-item p{
+.service-item:not(.visually-hidden){
+    min-width: 620px;
+    position: relative;
+    min-height: 280px;
+}
+
+.service-item-content{
     font-size: 13px;
     line-height: 24px;
     color: #000000;
     font-family: "PT Sans", sans-serif;
 }
 
-.service-item h3{
+.service-item-title{
     color: #32425c;
+    margin: 0 0 30px 0;
+}
+
+.service-item-content{
+    margin: 0;
+}
+
+.service-item-image{
+    position: absolute;
+    top: 22px;
+    right: 0;
+}
+
+.company-features-list{
+    width: 240px;
+    padding: 0px;
+    margin:  0 0 80px 0;
+
+}
+.company-features-item a{
+    padding: 15px 0 15px 20px;
+    display: block;
+    width: 240px;
+}
+
+.company-feature-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .company-features-item{
@@ -390,9 +578,16 @@ a:active{
 .company-features-current a{
     color: #32425c;
 }
+/* #endregion Main services */
 
+/* #region Main company info */
 .company-info{
     color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 75px;
+    padding-bottom: 85px;
+
 }
 
 .company-info h2{
@@ -400,25 +595,73 @@ a:active{
     font-weight: normal;
     font-size: 30px;
     line-height: 30px;
+    margin-bottom: 35px;
 }
 
 .company-info p{
     font-size: 13px;
     line-height: 24px;
+    padding-bottom: 25px;
+    margin: 0;
+}
+
+.company-info-delivery-types{
+    margin: 0;
+    padding: 0;
 }
 
 .company-info-delivery-types li{
     font-size: 18px;
     line-height: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
 }
 
+.company-info-about{
+    width: 540px;
+}
+
+.company-info-about p{
+    padding-right: 15px;
+}
+/* #endregion Main company info */
+
+/* #endregion Main */
+
+
+
+
+/* #region Footer */
 .main-footer{
     background-color: #32425c;
     color: #ffffff;
 }
 
+
+.top-sub-main-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 200px;
+}
+
 .bottom-sub-main-footer{
     background-color: #293449;
+}
+
+.main-footer-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.main-footer-nav li:not(:first-child){
+    margin-left: 60px;
+}
+
+.main-footer-nav li{
+    padding: 10px 0;
 }
 
 .main-footer-nav a:hover{
@@ -439,22 +682,66 @@ a:active{
     color: #ffd180;
 }
 
-
 .main-footer-address{
     font-style: normal;
+    width: 380px;
 }
 
 .bottom-sub-main-footer{
     font-size: 16px;
     line-height: 18px;
+    padding-top: 30px;
+}
+
+.bottom-sub-main-footer .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-footer-copyrights,
+.developer-site,
+.developer-feedback{
+    margin: 0;
+}
+
+.main-footer-copyrights{
+    width: 230px;
+}
+
+.main-footer-social ul{
+    display: flex;
+    width: 135px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+
 }
 
 .social-button{
     background-color: #212a3a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-button img{
+    position: absolute;
 }
 
 .social-button:hover{
     background-color: #ee3643;
+}
+
+.developer-info{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .developer-info-link{
@@ -484,6 +771,10 @@ a:active{
 .send-form-footer{
     background-color: #f4f4f4;
 }
+
+/* #endregion Footer */
+
+
 
 
 /* #region Catalog.html */
