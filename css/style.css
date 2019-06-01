@@ -82,42 +82,99 @@ a{
     min-height: 42px;
 }
 
+.header-logo-wrapper{
+    margin-right: auto;
+    width: 220px;
+    min-height: 42px;
+}
+
 .header-interface-wrapper{
-    width: 720px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-.main-header-interface .container{
+.interface-link{
+    width: 150px;
+    min-height: 42px;
+    padding-left: 45px;
     display: flex;
-    flex-wrap: wrap;
-    flex-basis: content;
+    align-items: center;
+    position: relative;
 }
 
-.main-header-interface 
-a:hover{
+.interface-link:hover{
     background-color: #212a3a;
 }
 
-.main-header-interface 
-a:active{
+.interface-link:active{
     background-color: #161d29;
 }
 
+.interface-link:hover svg{
+    opacity: 1;
+}
 
-.search-input{
+.interface-link:active svg{
+    opacity: 0.5;
+}
+
+.interface-link svg{
+    opacity: 0.3;
+    position: absolute;
+    left: 17px;
+    top: 13px;
+    fill: #ffffff;
+}
+
+.interface-link span{
+    padding-left: 5px;
+}
+
+
+.interface-link.interface-link-search{
+    height: auto;
+    flex: 1;
+    padding-left: 0;
+    min-width: 150px;
+}
+
+.interface-link .search-input{
+    width: 100%;
     background-color: #293449;
     border: none;
+    height: 100%;
     font-size: 17px;
     line-height: 18px;
+    padding-left: 55px;
     color: #ffffff;
     font-family: Cuprum, sans-serif;
 }
 
-.search-input::placeholder{
+.interface-link .search-input::placeholder{
     color: #ffffff;
     font-size: 17px;
     line-height: 18px;
+}
+
+.interface-link .search-input:hover{
+    background-color: #212a3a;
+}
+
+.interface-link .search-input:focus{
+    background-color: #ffffff;
+    border: none;
+    font-size: 17px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.interface-link .search-input:focus::placeholder{
+    color: #000000;
+}
+
+.interface-link .search-input:focus ~svg{
+    fill: #ee3643;
 }
 
 .cart-with-products{
@@ -126,6 +183,8 @@ a:active{
 
 .make-order-link {
     background-color: #63a63e;
+    padding: 0;
+    justify-content: center;
 }
 
 .main-header-interface 
@@ -147,6 +206,8 @@ a:active{
 
     box-shadow: inset 0px -4.5px 0 0 rgba(0, 0, 0, 0.24);
     text-align: center;
+    padding-top: 10px;
+    position: absolute;
 }
 
 .main-header-interface 
@@ -157,25 +218,6 @@ a:active{
 .main-header-interface 
 .main-logo:active{
     background-color: #ba2732;
-}
-
-
-.main-header-interface 
-.search-input:hover{
-    background-color: #212a3a;
-}
-
-.main-header-interface 
-.search-input:focus{
-    background-color: #ffffff;
-    border: none;
-    font-size: 17px;
-    line-height: 18px;
-    color: #000000;
-}
-
-.search-input:focus::placeholder{
-    color: #000000;
 }
 
 /* #endregion Header interface */
@@ -201,6 +243,8 @@ a:active{
     font-style: italic;
     width: 300px;
     text-align: left;
+    padding-top: 50px;
+    padding-left: 52px;
 }
 
 .main-header 
@@ -614,7 +658,15 @@ a:active{
     font-size: 18px;
     line-height: 20px;
     padding-bottom: 20px;
-    padding-left: 30px;
+    padding-left: 35px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.list-style-icon{
+    position: absolute;
+    left: 0;
 }
 
 .company-info-about{
