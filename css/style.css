@@ -1334,6 +1334,8 @@ a:active{
     color: #acaaa5;
     font-size: 13px;
     line-height: 18px;
+    border-bottom: 1px dotted red; 
+    
 }
 
 .sort-list .sort-item:last-child{
@@ -1342,6 +1344,7 @@ a:active{
 
 .sort-list .sort-item-current a{
     color: #ee3643;
+    border-bottom: none; 
 }
 
 .sort-order{
