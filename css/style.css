@@ -362,20 +362,18 @@ a:active{
 
 /* #endregion Header */
 
-
-
-
 /* #region Main */
 
 
 /* #region Main promo */
 .promo-list{
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     padding: 0px;
     margin: 0px;
-    position: relative;
-    justify-content: space-between;
+    /* position: relative;
+    justify-content: space-between; */
+    font-size: 0;
 }
 
 .promo{
@@ -396,9 +394,11 @@ a:active{
     width: 300px;
     height: 123px;
     margin-bottom: 20px;
+    margin-right: 20px;
     padding-left: 22px;
     padding-top: 25px;
     position: relative;
+    display: inline-block;
 }
 
 .promo-item-image{
@@ -434,19 +434,29 @@ a:active{
 }
   
 
-.promo-item-goods{
+.promo-item-good{
     background-color: #ffbf47;
 }
 
-.promo-item-tools{
+.promo-item-tool{
     background-color: #3bbce3;
 }
 
-.promo-item-technics{
+.promo-item-technic{
     background-color: #dc91d8;
 }
 
-.promo-item-discounts{
+/* .promo-item-technic,
+.promo-item-discount,
+.promo-item-delivery{
+    margin-right: 0;
+} */
+
+.promo-item:nth-child(3n){
+    margin-right: 0;
+}
+
+.promo-item-discount{
     background-color: #8ed78f;
 }
 
@@ -455,17 +465,25 @@ a:active{
     height: 266px;
     padding-left: 0;
     padding-top: 0;
-
 }
 
 .promo-slider-wrapper {
     color: #ffffff;
 }
 
+.promo-item-test{
+    background-color: red;
+}
+
 .promo-slider{
     padding-left: 24px;
     padding-top: 24px;
     position: relative;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    width: 620px;
+    height: 266px;
 }
 
 .promo-slider-header{
@@ -478,20 +496,10 @@ a:active{
 
 .promo-slider-drill{
     background-image: url(../img/slider/drill.jpg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 100%;
-    width: 620px;
-    height: 266px;
 }
 
 .promo-slider-perforator{
     background-image: url(../img/slider/perforator.jpg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 100%;
-    width: 620px;
-    height: 266px;
 }
 
 .promo-item-delivery{
