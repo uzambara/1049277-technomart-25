@@ -59,7 +59,6 @@ a{
     background-position: 0 0;
     background-size: 100%;
     min-height: 320px;
-    margin-bottom: 59px;
 }
 
 .main-header h1{
@@ -231,14 +230,19 @@ a{
     font-size: 16px;
     line-height: 23px;
     font-style: italic;
-    width: 205px;
+    padding-left: 52px;
+    padding-top: 2px;
     text-align: left;
-    margin-left: 50px;
+    width: 300px;
 }
 
 .main-header 
 address{
     font-style: normal;
+}
+
+.main-header-contacts{
+    width: 300px;
 }
 
 .main-header-contacts-phone{
@@ -247,11 +251,12 @@ address{
     line-height: 21px;
     width: 272px;
     height: 45px;
-    border: solid 1.5px #ffffff;
+    border: solid 2px #ffffff;
     display: block;
     padding-top: 10px;
-    padding-left: 72px;
+    padding-left: 73px;
     position: relative;
+    border-radius: 1px;
 }
 
 .phone-icon{
@@ -265,22 +270,18 @@ address{
     font-size: 14px;
     line-height: 24px;
     margin: 0;
-    text-align: center;
-    padding-top: 4px;
-}
-
-.user-nav{
-    width: 282px;
+    padding-left: 9px;
+    padding-top: 3px;
 }
 
 .user-nav ul{
-    display: flex;
-    width: 282px;
+    width: 300px;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
+
 
 .login-link{
     width: 120px;
@@ -289,6 +290,7 @@ address{
 
 .register-link{
     width: 140px;
+    margin-left: 20px;
 }
 
 .login-icon{
@@ -381,6 +383,7 @@ a:active{
 
 .promo{
     margin-bottom: 35px;
+    margin-top: 59px;
 }
 
 .promo-item-header{
@@ -1086,15 +1089,13 @@ a:active{
 /* #endregion Footer */
 
 /* #region Dialog map */
-.dialog{
-    position: relative;
-}
 
 .dialog-map{
     margin: 0 auto;
     width: 940px;
     height: 446px;
     text-align: center;
+    position: relative;
 }
 
 .close-button{
@@ -1118,13 +1119,13 @@ a:active{
 
 /* #region Dialog feedback */
 
-.dialog-feedback{
+.dialog-form{
     margin: 0 auto;
     width: 620px;
-    min-height: 410px;
     border-top: 5px solid #ff5357;
     padding-top: 45px;
     box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75);
+    position: relative;
 }
 
 .feed-back-form-wrapper{
@@ -1184,42 +1185,331 @@ a:active{
 /* #endregion  Dialog feedback */
 
 /* #region Catalog.html */
-.current-user a{
-    color: #000000;
-    background-color: #ffffff;
-    font-size: 21px;
-    line-height: 21px;
+
+/* #region Catalog user-menu */
+.autorized-user-nav .current-user{
+    position: relative;
+    padding-left: 46px;
+    text-align: left;
 }
 
-.current-user a:active{
-    color: #cacaca;
+.current-user:hover svg{
+    fill: #32425c;
 }
 
-.autorized-user-nav a{
+.current-user:active svg{
+    fill: #c5c5c5;
+}
+
+.autorized-user-nav ul{
+    justify-content: flex-start;
+    padding-left: 17px;
+}
+
+.autorized-user-nav-personal{
+    position: relative;
+    margin-left: 8px;
+}
+
+.list-style{
+    position: absolute;
+    top: 15px;
+    left: -16px;
+}
+
+.user-icon{
+    position: absolute;
+    left: 13px;
+    top: 12px;
+    fill: #c5c5c5;
+}
+
+.logout-icon{
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    fill: #c5c5c5;
+}
+
+.autorized-user-nav li a{
+    background-color: transparent;
     text-decoration: underline;
     font-size: 16px;
     line-height: 18px;
     color: #32425c;
 }
-.autorized-user-nav a{
-    background-color: transparent;
+/* #endregion Catalog user-menu */
+
+/* #region Breadcrumbs */
+.breadcrumbs ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    margin-bottom: 25px;
 }
 
+.breadcrumbs li{
+    margin-right: 40px;
+    position: relative;
+}
 
-.breadcrumbs{
-    font-family: "PT Sans", sans-serif;
+.breadcrumbs-list-style{
+    position: absolute;
+    left: -20px;
+    top: 2px;
+}
+
+.breadcrumbs-home-img{
+    position: relative;
+    top: 2px;
 }
 
 .breadcrumbs li a,
 .breadcrumbs li{
     color: #000000;
     text-transform: uppercase;
+    font-family: "PT Sans", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+/* #endregion Breadcrumbs */
+
+.product{
+    font-family: "PT Sans", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.product-title{
+    background-color: #f2f6f8;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    padding-top: 26px;
+    padding-left: 26px;
+    padding-bottom: 26px;
+    font-family: "Cuprum", sans-serif;
+    margin: 0;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+/* #region Catalog sort */
+.product-sort{
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f7f3ec;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+.product-sort-title{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    width: 220px;
+    padding-left: 18px;
+}
+
+.sort-list{
+    display: flex;
+    width: 380px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.sort-list .sort-item a{
+    text-transform: uppercase;
+    color: #acaaa5;
     font-size: 13px;
     line-height: 18px;
 }
 
+.sort-list .sort-item:last-child{
+    margin-right: 27px;
+}
+
+.sort-list .sort-item-current a{
+    color: #ee3643;
+}
+
+.sort-order{
+    width: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.sort-order a{
+    margin-right: 19px;
+}
+
+.sort-order svg{
+    fill: #c5c5c5;
+}
+
+.sort-order .sort-order-current{
+    fill: #ee3643;
+}
+
+/* #endregion Catalog sort */
+
+/* #region Catalog list */
+.product-catalog-wrapper{
+    max-width: 700px;
+}
+
+.product-catalog .products-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.products-list{
+    margin-bottom: 35px;
+}
+
+/* #endregion catalog list */
+
+/* #region Product filter */
+
+.product-filter{
+    width: 220px;
+}
+
+.product-filter-title{
+    background-color: #f7f3ec;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    padding-top: 9px;
+    padding-left: 19px;
+    padding-bottom: 10px;
+    margin: 0;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.filter ul{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.filter li{
+    padding-left: 20px;
+    margin-bottom: 18px;
+}
+
+.price-control{
+    width: 220px;
+    height: 80px;
+    background-color: #f7f3ec;
+    margin-bottom: 9px;
+    border-radius: 3px;
+}
+
+.price-start-input,
+.price-end-input{
+    width: 95px;
+    height: 38px;
+    background-color: #f7f3ec;
+    border: none;
+    border-radius: 3px;
+}
+
+.product-filter .filter-name{
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.product-filter .filter{
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+    padding-bottom: 22px;
+    width: 220px;
+}
+
+.button-filter-submit{
+    width: 140px;
+    margin-top: 18px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 13px;
+    line-height: 18px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+/* #endregion Product filter */
+
+/* #region Catalog pagination */
+.pagination-list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination-item{
+    margin-right: 10px;
+}
+
+.pagination-item a{
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    color: #000000;
+    font-size: 13px;
+    line-height: 18px;
+    display: block;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+.pagination-item-next a{
+    width: auto;
+    padding-left: 31px;
+    padding-right: 31px;
+}
+
+.pagination-item.pagination-item-current a{
+    background-color: #ee3643;
+    color: #ffffff;
+    border-color: transparent;
+}
+
+/* #endregion Catalog pagination */
+
 .about-product{
     background-color: #f2f6f8;
+    width: 100%;
+    padding-bottom: 70px;
+}
+
+.about-product .container{
+    padding-top: 65px;
 }
 
 .about-product h2{
@@ -1227,15 +1517,46 @@ a:active{
     line-height: 30px;
     text-transform: uppercase;
     font-weight: normal;
+    margin: 0;
+    margin-bottom: 25px;
 }
 
 .about-product p{
     font-size: 13px;
     line-height: 24px;
     font-family: "PT Sans", sans-serif;
+    margin: 0;
 }
 /* #endregion Catalog.html */
 
+.dialog-form-buy-success{
+    padding-top: 70px;
+}
+
+.dialog-form-buy-success p{
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    margin-left: 177px;
+    margin-bottom: 70px;
+}
+
+.dialog-form-buy-success .success-icon{
+    position: absolute;
+    top: 55px;
+    left: 81px;
+}
+
+.button-make-order,
+.button-continue-shopping{
+    width: 220px;
+    margin-right: 20px;
+}
+
+.button-continue-shopping{
+    color: #000000;
+    background-color: #ffffff;
+}
 
 .visually-hidden{
     position: absolute;
