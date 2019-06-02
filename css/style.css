@@ -18,17 +18,6 @@ a{
     color: #ffffff;
 }
 
-.visually-hidden{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0px;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
 .button{
     font-size: 14px;
     line-height: 18px;
@@ -38,6 +27,10 @@ a{
     font-family: inherit;
     text-transform: uppercase;
     border: none;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 1px;
 }
 
 .button:hover{
@@ -80,12 +73,13 @@ a{
     line-height: 18px;
     color: #ffffff;
     min-height: 42px;
+    margin-bottom: 47px;
 }
 
 .header-logo-wrapper{
     margin-right: auto;
     width: 220px;
-    min-height: 42px;
+    min-height: 44px;
 }
 
 .header-interface-wrapper{
@@ -146,7 +140,7 @@ a{
     height: 100%;
     font-size: 17px;
     line-height: 18px;
-    padding-left: 55px;
+    padding-left: 50px;
     color: #ffffff;
     font-family: Cuprum, sans-serif;
 }
@@ -175,6 +169,7 @@ a{
 
 .interface-link .search-input:focus ~svg{
     fill: #ee3643;
+    opacity: 1;
 }
 
 .cart-with-products{
@@ -226,14 +221,8 @@ a{
 .address-container{
     display: flex;
     flex-wrap: wrap;
-    min-height: 160px;
+    min-height: 111px;
     justify-content: space-between;
-}
-
-.address-container .h1,
-.address-container .main-header-contacts,
-.address-container .user-nav{
-    width: 300px;
 }
 
 .main-header h1{
@@ -241,10 +230,9 @@ a{
     font-size: 16px;
     line-height: 23px;
     font-style: italic;
-    width: 300px;
+    width: 205px;
     text-align: left;
-    padding-top: 50px;
-    padding-left: 52px;
+    margin-left: 50px;
 }
 
 .main-header 
@@ -256,29 +244,79 @@ address{
     color: #ee3643;
     font-size: 21px;
     line-height: 21px;
+    width: 272px;
+    height: 45px;
+    border: solid 1.5px #ffffff;
+    display: block;
+    padding-top: 10px;
+    padding-left: 72px;
+    position: relative;
+}
+
+.phone-icon{
+    position: absolute;
+    left: 13px;
+    top: 12px;
 }
 
 .main-header-contacts-address{
     color: #000000;
     font-size: 14px;
     line-height: 24px;
+    margin: 0;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.user-nav{
+    width: 282px;
+}
+
+.user-nav ul{
+    display: flex;
+    width: 282px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-link{
+    width: 120px;
+    position: relative;
+}
+
+.register-link{
+    width: 140px;
+}
+
+.login-icon{
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    fill: #c5c5c5;
 }
 
 .user-nav 
 a{
     background-color: #ffffff;
-}
-
-.user-nav 
-a{
     color: #000000;
     font-size: 21px;
     line-height: 21px;
+    display: block;
+    height: 42px;
+    padding-right: 25px;
+    padding-top: 10px;
+    text-align: right;
 }
 
 .user-nav 
 a:hover{
     color: #ee3643;
+}
+
+.user-nav .login-link:hover svg{
+    fill: #32425c;
 }
 
 .user-nav 
@@ -294,20 +332,19 @@ a:active{
     padding: 0px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     min-height: 60px;
     background-color: #32425c;
     box-shadow: inset 0px -4.5px 0 0 #293449;
 }
 
 .site-nav a{
-    width: 127px;
     display: block;
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 17px;
     line-height: 17px;
-    text-align: center;
+    padding: 19px 30px 19px 30px;
 }
 
 .site-nav a:hover{
@@ -352,26 +389,48 @@ a:active{
     color: #ffffff;
     margin: 0px;
     padding: 0px;
+    margin-bottom: 10px;
 }
 
 .promo-item{
     width: 300px;
     height: 123px;
     margin-bottom: 20px;
+    padding-left: 22px;
+    padding-top: 25px;
+    position: relative;
 }
 
-.promo-item a{
+.promo-item-image{
+    position: absolute;
+    left: 191px;
+    top: 31px;
+}
+
+.promo-item-new{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.promo-item .pro-item-link{
     font-size: 14px;
     line-height: 18px;
     background: rgba(0, 0, 0, 0.1);
+    width: 135px;
+    height: 38px;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 10px;
 }
 
-.promo-item a:hover{
-    background-color: rgba(204, 204, 204, 0.2);
+.promo-item .pro-item-link:hover{
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-.promo-item a:active{
-    background-color: rgba(178, 178, 178, 0.3);
+.promo-item .pro-item-link:active{
+    background-color: rgba(0, 0, 0, 0.3);
 }
   
 
@@ -394,17 +453,28 @@ a:active{
 .promo-item-slider{
     width: 620px;
     height: 266px;
+    padding-left: 0;
+    padding-top: 0;
 
 }
 
-.promo-slider{
+.promo-slider-wrapper {
     color: #ffffff;
 }
 
-.promo-slider h3{
-    margin: 0px;
-    padding: 0px;
+.promo-slider{
+    padding-left: 24px;
+    padding-top: 24px;
+    position: relative;
 }
+
+.promo-slider-header{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 36px;
+} 
 
 .promo-slider-drill{
     background-image: url(../img/slider/drill.jpg);
@@ -428,16 +498,47 @@ a:active{
     background-color: #ffc047;
 }
 
-
-.promo-slider h3{
-    font-size: 36px;
-    line-height: 36px;
-}
-
 .promo-slider p{
     font-size: 18px;
     line-height: 24px;
+    margin: 0;
 }
+
+.promo-slider .button{
+    position: absolute;
+    bottom: 22px;
+    left: 25px;
+    width: 195px;
+}
+
+.promo-slider-prev,
+.promo-slider-next{
+    border: none;
+    position: absolute;
+    top: 114px;
+    background-color: rgb(0, 0, 0, 0);
+    width: 20px;
+    height: 40px;
+}
+
+.promo-slider-prev{
+    background-image: url(../img/icons/icon-left.svg);
+    left: 23px;
+}
+
+.promo-slider-next{
+    background-image: url(../img/icons/icon-right.svg);
+    right: 20px;
+}
+/* .promo-slider-prev::before,
+.promo-slider-next::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 40px;
+    background-image: url(../img/icons/icon-left.svg);
+} */
+
 /* #endregion Main promo */
 
 
@@ -912,3 +1013,15 @@ a:active{
     font-family: "PT Sans", sans-serif;
 }
 /* #endregion Catalog.html */
+
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
