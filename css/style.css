@@ -704,6 +704,14 @@ a:active{
     border-left-color: #ee3643;
 }
 
+.product-card-price-new:hover:after{
+    border-left-color: #ca2c37;
+}
+
+.product-card-price-new:active:after{
+    border-left-color: #ba2732;
+}
+
 /* #endregion Main popular products */
 
 
