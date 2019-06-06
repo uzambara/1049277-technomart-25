@@ -177,33 +177,60 @@
 
                     <fieldset class="filter">
                         <legend class="filter-name">Производители:</legend>
-                        <ul>
+                        <ul class="filter-list filter-list-manufacturer">
                             <li>
-                                <label><input name="bosch" type="checkbox" checked>Bosch</label>
+                                <label>
+                                    <input class="visually-hidden" name="bosch" type="checkbox" checked>
+                                    <span class="input-indicator checkbox-indicator"></span>
+                                    Bosch</label>
                             </li>
                             <li>
-                                <label><input name="interskol" type="checkbox">Интерскол</label>
+                                <label>
+                                    <input class="visually-hidden" name="interskol" type="checkbox">
+                                    <span class="input-indicator checkbox-indicator"></span>
+                                    Интерскол
+                                </label>
                             </li>
                             <li>
-                                <label><input name="makita" type="checkbox" checked>Makita</label>
+                                <label>
+                                    <input class="visually-hidden" name="makita" type="checkbox" checked>
+                                    <span class="input-indicator checkbox-indicator"></span>
+                                    Makita
+                                </label>
                             </li>
                             <li>
-                                <label><input name="dewalt" type="checkbox">Dewalt</label>
+                                <label>
+                                    <input class="visually-hidden" name="dewalt" type="checkbox">
+                                    <span class="input-indicator checkbox-indicator"></span>
+                                    Dewalt
+                                </label>
                             </li>
                             <li>
-                                <label><input name="hitachi" type="checkbox">Hitachi</label>
+                                <label>
+                                    <input class="visually-hidden" name="hitachi" type="checkbox">
+                                    <span class="input-indicator checkbox-indicator"></span>
+                                    Hitachi
+                                </label>
                             </li>
                         </ul>
                     </fieldset>
 
                     <fieldset class="filter">
                         <legend class="filter-name">Питание:</legend>
-                        <ul>
+                        <ul class="filter-list filter-list-powertype">
                             <li>
-                                <label><input name="battery" type="radio" checked>Аккумуляторные</label>
+                                <label>
+                                    <input class="visually-hidden" name="powerFilter" type="radio" checked>
+                                    <span class="input-indicator radio-indicator"></span>
+                                    Аккумуляторные
+                                </label>
                             </li>
                             <li>
-                                <label><input name="mainPower" type="radio">Сетевые</label>
+                                <label>
+                                    <input class="visually-hidden" name="powerFilter" type="radio">
+                                    <span class="input-indicator radio-indicator"></span>
+                                    Сетевые
+                                </label>
                             </li>
                         </ul>
                     </fieldset>

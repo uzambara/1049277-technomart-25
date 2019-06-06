@@ -1445,7 +1445,62 @@ a:active{
 
 .filter li{
     padding-left: 20px;
-    margin-bottom: 18px;
+    margin-bottom: 17px;
+    padding: 0;
+}
+
+.filter li:hover .input-indicator{
+    opacity: 0.5;
+}
+
+.filter li:active .input-indicator{
+    opacity: 0.2;
+}
+
+.filter li label {
+    position: relative;
+    padding-left: 35px;
+    display: block;
+    min-height: 25px;
+    padding-top: 3px;
+}
+
+.input-indicator{
+    width: 27px;
+    height: 23px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -11.5px;
+    left: 0;
+    opacity: 0.3;
+}
+
+.checkbox-indicator{
+    background-image: url(../img/icons/checkbox-off.svg);
+    background-repeat: no-repeat;
+}
+
+.radio-indicator{
+    background-image: url(../img/icons/radio-off.svg);
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.filter-list input:focus + .input-indicator{
+    outline: 5px auto -webkit-focus-ring-color;
+    outline: thin dotted;
+}
+
+.filter-list input[type="checkbox"]:checked + .checkbox-indicator{
+    background-image: url(../img/icons/checkbox-on.svg);
+    background-repeat: no-repeat;
+}
+
+.filter-list input[type="radio"]:checked + .radio-indicator{
+    background-image: url(../img/icons/radio-on.svg);
+    background-repeat: no-repeat;
 }
 
 .price-control{
