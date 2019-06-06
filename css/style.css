@@ -9,10 +9,6 @@ body *{
     box-sizing: border-box;
 }
 
-ul{
-    list-style: none;
-}
-
 a{
     text-decoration: none;
     color: #ffffff;
@@ -280,6 +276,7 @@ address{
     padding: 0;
     display: flex;
     justify-content: flex-end;
+    list-style: none;
 }
 
 
@@ -339,6 +336,7 @@ a:active{
     min-height: 60px;
     background-color: #32425c;
     box-shadow: inset 0px -4.5px 0 0 #293449;
+    list-style: none;
 }
 
 .site-nav a{
@@ -379,6 +377,7 @@ a:active{
     margin: 0px;
     position: relative;
     justify-content: space-between;
+    list-style: none;
 }
 
 .promo{
@@ -547,6 +546,7 @@ a:active{
     justify-content: space-between;
     padding: 0px;
     margin: 0px;
+    list-style: none;;
 }
 
 .popular-header{
@@ -816,6 +816,8 @@ a:active{
     width: 240px;
     padding: 0;
     margin: 0;
+    list-style: none;
+
 }
 
 .company-features-item a{
@@ -962,6 +964,7 @@ a:active{
     justify-content: flex-end;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 .main-footer-nav li:not(:first-child){
@@ -1033,6 +1036,7 @@ a:active{
     justify-content: space-between;
     padding: 0;
     margin: 0;
+    list-style: none;
 
 }
 
@@ -1199,6 +1203,7 @@ a:active{
     position: relative;
     padding-left: 46px;
     text-align: left;
+
 }
 
 .current-user:hover svg{
@@ -1256,6 +1261,7 @@ a:active{
     flex-wrap: wrap;
     padding-top: 20px;
     margin-bottom: 25px;
+    list-style: none;
 }
 
 .breadcrumbs li{
@@ -1335,6 +1341,7 @@ a:active{
     justify-content: space-between;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 .sort-list .sort-item a{
@@ -1387,6 +1394,7 @@ a:active{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
+    list-style: none;
 }
 
 .products-list{
@@ -1420,6 +1428,7 @@ a:active{
     margin: 0;
     padding: 0;
     text-transform: uppercase;
+    list-style: none;
 }
 
 .filter li{
@@ -1479,6 +1488,7 @@ a:active{
     display: flex;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .pagination-item{
