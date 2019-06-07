@@ -13,6 +13,9 @@ const nextSliderSelector = ".promo-slider-next";
 const prevSliderSelector = ".promo-slider-prev"; 
 const sliderSelector = ".promo-slider";
 
+// Сервисы
+const currentServiceClassName = "company-features-current";
+
 const showDialogClassName = "show-dialog";
 const overlaySelector = ".overlay";
 
@@ -40,4 +43,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Слайдер
     let slider = new Slider(nextSliderSelector, prevSliderSelector, sliderSelector);
     slider.addSliderListeners();
+
+    let servicePairs = [
+        new ServicePair(".company-features-item-delivery", ".service-item-delivery"),
+        new ServicePair(".company-features-item-warranty", ".service-item-warranty"),
+        new ServicePair(".company-features-item-credit", ".service-item-credit")
+    ];
+
+    let services = new Services(servicePairs, currentServiceClassName);
+    services.addEventListeners();
 });
