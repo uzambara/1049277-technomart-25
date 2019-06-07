@@ -402,7 +402,7 @@ a:active{
 
 .promo-item{
     width: 300px;
-    height: 123px;
+    min-height: 123px;
     margin-bottom: 20px;
     padding-left: 22px;
     padding-top: 25px;
@@ -426,11 +426,12 @@ a:active{
     line-height: 18px;
     background: rgba(0, 0, 0, 0.1);
     width: 135px;
-    height: 38px;
+    min-height: 38px;
     display: block;
     text-transform: uppercase;
     text-align: center;
     padding-top: 10px;
+    padding-bottom: 8px;
 }
 
 .promo-item .pro-item-link:hover{
@@ -776,6 +777,23 @@ a:active{
     font-size: 13px;
     line-height: 24px;
     font-family: "PT Sans", sans-serif;
+}
+
+.service-item{
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+}
+
+.service-item-delivery{
+    background-image: url(../img/services/delivery.png);
+}
+
+.service-item-warranty{
+    background-image: url(../img/services/garanty.png);
+}
+
+.service-item-credit{
+    background-image: url(../img/services/credit.png);
 }
 
 .service-item:not(.visually-hidden){
