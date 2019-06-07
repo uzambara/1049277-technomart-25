@@ -594,6 +594,7 @@ a:active{
     background-color: rgb(0, 0, 0, 0);
     width: 20px;
     height: 40px;
+    cursor: pointer;
 }
 
 .promo-slider-prev{
@@ -1299,6 +1300,11 @@ a:active{
     top: 25px;
     right: 25px;
 }
+
+.close-button{
+    cursor: pointer;
+}
+
 /* #endregion Dialog map */
 
 /* #region Dialog feedback */
@@ -1310,6 +1316,7 @@ a:active{
     z-index: 10;
     -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75);
+    display: none;
 }
 
 .dialog-form{
@@ -1883,4 +1890,9 @@ a:active{
     left: 0;
     z-index: 5;
     opacity: 0.5;
+    display: none;
+}
+
+.show-dialog{
+    display: block;
 }
