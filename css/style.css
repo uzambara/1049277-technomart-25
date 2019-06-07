@@ -1286,6 +1286,10 @@ a:active{
     text-align: center;
     position: relative;
     margin-left: -470px;
+    background-image: url(../img/big-map.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
 }
 
 .close-button{
