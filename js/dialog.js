@@ -5,10 +5,13 @@ function Dialog(dialogSelector, openElementSelector, closeElementSelector){
 
     // Подписка для открытие формы
     that.addOpenEventListener = function(){
-        let openElement = document.querySelector(openElementSelector);
+        let openElements = document.querySelectorAll(openElementSelector);
 
-        if(openElement){
-            openElement.addEventListener("click", that.showDialog);
+        if(openElements){
+            for (let index = 0; index < openElements.length; index++) {
+                const openElement = openElements[index];
+                openElement.addEventListener("click", that.showDialog);
+            }
         }else{
             that.logBadSelectorError(openElementSelector);
         }
@@ -28,7 +31,7 @@ function Dialog(dialogSelector, openElementSelector, closeElementSelector){
 
     that.showDialog = function(){
         that.preventDefault(arguments);
-
+   
         if(that.dialogElement){
             that.showOverlay();
             that.dialogElement.classList.add(showDialogClassName);
