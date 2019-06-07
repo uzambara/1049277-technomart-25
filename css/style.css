@@ -535,12 +535,17 @@ a:active{
 
 .promo-slider-wrapper {
     color: #ffffff;
+    position: relative;
 }
 
 .promo-slider{
     padding-left: 24px;
     padding-top: 24px;
-    position: relative;
+    position: absolute;
+    transition-property: opacity;
+    transition-duration: 2s;
+    top: 0;
+    left: 0;
 }
 
 .promo-slider-header{
@@ -1895,4 +1900,8 @@ a:active{
 
 .show-dialog{
     display: block;
+}
+
+.display-none{
+    display: none;
 }

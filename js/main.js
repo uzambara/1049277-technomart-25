@@ -8,8 +8,15 @@ const mapDialogSelector = ".dialog-map";
 const mapOpenSelector = ".company-info-map-link";
 const mapCloseSelector = ".dialog-map .close-button"
 
+// Слайдер
+const nextSliderSelector = ".promo-slider-next"; 
+const prevSliderSelector = ".promo-slider-prev"; 
+const sliderSelector = ".promo-slider";
+
 const showDialogClassName = "show-dialog";
 const overlaySelector = ".overlay";
+
+const visuallyHiddenClassName = "visually-hidden";
 
 document.addEventListener("DOMContentLoaded", function () {
     // Форма обратной связи
@@ -29,4 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     mapDialog.addOpenEventListener();
     mapDialog.addCloseEventListener();
+
+    // Слайдер
+    let slider = new Slider(nextSliderSelector, prevSliderSelector, sliderSelector);
+    slider.addSliderListeners();
 });
