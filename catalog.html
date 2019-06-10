@@ -168,11 +168,14 @@
                 <h3 class="product-filter-title">Фильтр:</h3>
                 <form action="https://echo.htmlacademy.ru" method="GET">
 
-                    <div class="filter">
+                    <div class="filter filter-price">
                         <div class="filter-name">Цена:</div>
                         <div class="price-control"></div>
-                        <input class="price-start-input" type="text" aria-label="Нижняя граница цена">
-                        <input class="price-end-input" type="text" aria-label="Верхняя граница цены">
+                        <div class="prices-filter-wrapper">
+                            <input class="price-start-input" type="text" value="0" aria-label="Нижняя граница цена">
+                            <span class="price-delimeter"></span>
+                            <input class="price-end-input" type="text" value="30000" aria-label="Верхняя граница цены">
+                        </div>
                     </div>
 
                     <fieldset class="filter">
@@ -215,7 +218,7 @@
                         </ul>
                     </fieldset>
 
-                    <fieldset class="filter">
+                    <fieldset class="filter filter-power">
                         <legend class="filter-name">Питание:</legend>
                         <ul class="filter-list filter-list-powertype">
                             <li>
@@ -283,7 +286,10 @@
                             </div>
                             <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
                             <span class="product-card-price product-card-price-old">22500 р.</span>
-                            <span class="button product-card-price product-card-price-new">15500 р.</span>
+                            <div class="price-new-wrapper">
+                                <span class="button product-card-price product-card-price-new">15500 р.</span>
+                                <span class="product-card-price-new-arrow"></span>
+                            </div>
                         </li>
                         <li class="product-card">
                             <div class="product-card-wrapper">
@@ -298,7 +304,10 @@
                             </div>
                             <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
                             <span class="product-card-price product-card-price-old">30500 р.</span>
-                            <span class="button product-card-price product-card-price-new">25500 р.</span>
+                            <div class="price-new-wrapper">
+                                <span class="button product-card-price product-card-price-new">25500 р.</span>
+                                <span class="product-card-price-new-arrow"></span>
+                            </div>
                         </li>
                         <li class="product-card">
                             <div class="product-card-wrapper">
@@ -312,7 +321,11 @@
                                 </div>
                             </div>
                             <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
-                            <span class="button product-card-price product-card-price-new">12500 р.</span>
+                            <span class="product-card-price product-card-price-old"></span>
+                            <div class="price-new-wrapper">
+                                <span class="button product-card-price product-card-price-new">15500 р.</span>
+                                <span class="product-card-price-new-arrow"></span>
+                            </div>
                             <img class="promo-item-new" src="img/new-flag.png" alt="Новинка">
                         </li>
                         <li class="product-card">
@@ -328,7 +341,10 @@
                             </div>
                             <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
                             <span class="product-card-price product-card-price-old">22500 р.</span>
-                            <span class="button product-card-price product-card-price-new">15500 р.</span>
+                            <div class="price-new-wrapper">
+                                <span class="button product-card-price product-card-price-new">15500 р.</span>
+                                <span class="product-card-price-new-arrow"></span>
+                            </div>
                         </li>
                         <li class="product-card">
                             <div class="product-card-wrapper">
@@ -343,7 +359,11 @@
                             </div>
                             <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
                             <span class="product-card-price product-card-price-old">30500 р.</span>
-                            <span class="button product-card-price product-card-price-new">25500 р.</span>
+                            <div class="price-new-wrapper">
+                                <span class="button product-card-price product-card-price-new">25500 р.</span>
+                                <span class="product-card-price-new-arrow"></span>
+                            </div>
+                            <img class="promo-item-new" src="img/new-flag.png" alt="Новинка">
                         </li>
                         <li class="product-card">
                             <div class="product-card-wrapper">
@@ -357,8 +377,11 @@
                                 </div>
                             </div>
                             <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
-                            <span class="button product-card-price product-card-price-new">12500 р.</span>
-                            <img class="promo-item-new" src="img/new-flag.png" alt="Новинка">
+                            <span class="product-card-price product-card-price-old"></span>
+                            <div class="price-new-wrapper">
+                                <span class="button product-card-price product-card-price-new">12500 р.</span>
+                                <span class="product-card-price-new-arrow"></span>
+                            </div>
                         </li>
                         <li class="product-card">
                             <div class="product-card-wrapper">
@@ -373,7 +396,11 @@
                             </div>
                             <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
                             <span class="product-card-price product-card-price-old">22500 р.</span>
-                            <span class="button product-card-price product-card-price-new">15500 р.</span>
+                            <div class="price-new-wrapper">
+                                <span class="button product-card-price product-card-price-new">15500 р.</span>
+                                <span class="product-card-price-new-arrow"></span>
+                            </div>
+                            <img class="promo-item-new" src="img/new-flag.png" alt="Новинка">
                         </li>
                         <li class="product-card">
                             <div class="product-card-wrapper">
@@ -388,7 +415,10 @@
                             </div>
                             <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
                             <span class="product-card-price product-card-price-old">30500 р.</span>
-                            <span class="button product-card-price product-card-price-new">25500 р.</span>
+                            <div class="price-new-wrapper">
+                                <span class="button product-card-price product-card-price-new">25500 р.</span>
+                                <span class="product-card-price-new-arrow"></span>
+                            </div>
                         </li>
                         <li class="product-card">
                             <div class="product-card-wrapper">
@@ -402,8 +432,11 @@
                                 </div>
                             </div>
                             <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
-                            <span class="button product-card-price product-card-price-new">12500 р.</span>
-                            <img class="promo-item-new" src="img/new-flag.png" alt="Новинка">
+                            <span class="product-card-price product-card-price-old"></span>
+                            <div class="price-new-wrapper">
+                                <span class="button product-card-price product-card-price-new">15500 р.</span>
+                                <span class="product-card-price-new-arrow"></span>
+                            </div>
                         </li>
                     </ul>
 
@@ -518,7 +551,7 @@
         <p>Товар добавлен в корзину</p>
         <form action="https://echo.htmlacademy.ru" method="GET">
             <div class="send-form-footer">
-                <button class="button button-make-order" type="submit">Оформит заказ</button>
+                <button class="button button-make-order" type="submit">Оформить заказ</button>
                 <button class="button button-continue-shopping" type="button">Продолжить покупки</button>
             </div>
         </form>
