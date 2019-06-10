@@ -1,22 +1,22 @@
 // Форма обратной связи
-const feedbackDialogSelector = ".dialog-form-feedback";
-const feedbackOpenSelector = ".button-write-us";
-const feedBackCloseSelector = ".dialog-form-feedback .close-button";
+const FEEDBACK_DIALOG_SELECTOR = ".dialog-form-feedback";
+const FEEDBACK_OPEN_SELECTOR = ".button-write-us";
+const FEEDBACK_CLOSE_SELECTOR = ".dialog-form-feedback .close-button";
 
 // Карта
-const mapDialogSelector = ".dialog-map";
-const mapOpenSelector = ".company-info-map-link";
-const mapCloseSelector = ".dialog-map .close-button"
+const MAP_DIALOG_SELECTOR = ".dialog-map";
+const MAP_OPEN_SELECTOR = ".company-info-map-link";
+const MAP_CLOSE_SELECTOR = ".dialog-map .close-button"
 
 // Слайдер
-const nextSliderSelector = ".promo-slider-next"; 
-const prevSliderSelector = ".promo-slider-prev"; 
-const sliderSelector = ".promo-slider";
+const NEXT_SLIDER_SELECTOR = ".promo-slider-next"; 
+const PREV_SLIDER_SELECTOR = ".promo-slider-prev"; 
+const SLIDER_SELECTOR = ".promo-slider";
 
 // Сервисы
-const currentServiceClassName = "company-features-current";
+const CURRENT_SERVICE_CLASS_NAME = "company-features-current";
 
-const showDialogClassName = "show-dialog";
-const overlaySelector = ".overlay";
+const SHOW_DIALOG_CLASS_NAME = "show-dialog";
+const OVERLAY_SELECTOR = ".overlay";
 
-const visuallyHiddenClassName = "visually-hidden";
+const VISUALLY_HIDDEN_CLASS_NAME = "visually-hidden";

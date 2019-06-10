@@ -17,6 +17,7 @@ function Services(servicePairs, currentClassName){
     that.addEventListeners = function(){
         for (const pair of that.servicePairs) {
             pair.link.addEventListener("click", that.changeService);
+            pair.link.childNodes[0].addEventListener("focus", that.changeService);
         }
     }
 
@@ -26,12 +27,12 @@ function Services(servicePairs, currentClassName){
         that.selectedService.classList.toggle(that.currentClassName);
         let selectedContent = that.getContentByLink(that.selectedService);
         if(selectedContent)
-            selectedContent.classList.toggle(visuallyHiddenClassName);
+            selectedContent.classList.toggle(VISUALLY_HIDDEN_CLASS_NAME);
 
         ev.target.parentElement.classList.toggle(that.currentClassName);
         let newSelectedService = that.getContentByLink(ev.target.parentElement);
         if(newSelectedService)
-            newSelectedService.classList.toggle(visuallyHiddenClassName);
+            newSelectedService.classList.toggle(VISUALLY_HIDDEN_CLASS_NAME);
 
         that.selectedService = ev.target.parentElement;
     }

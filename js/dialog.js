@@ -1,10 +1,16 @@
-function Dialog(dialogSelector, openElementSelector, closeElementSelector){
+function Dialog(dialogSelector){
     let that = this;
     that.dialogSelector = dialogSelector;
     that.dialogElement = document.querySelector(dialogSelector);
 
+    window.addEventListener("keyup", function(e){
+        if(e.keyCode === 27){
+            that.closeDialog();
+        }
+    });
+
     // Подписка для открытие формы
-    that.addOpenEventListener = function(){
+    that.addOpenEventListener = function(openElementSelector){
         let openElements = document.querySelectorAll(openElementSelector);
 
         if(openElements){
@@ -18,7 +24,7 @@ function Dialog(dialogSelector, openElementSelector, closeElementSelector){
     }
 
     // Подписка для открытие формы
-    that.addCloseEventListener = function(){
+    that.addCloseEventListener = function(closeElementSelector){
         let closeElement = document.querySelector(closeElementSelector);
 
         if(closeElement){
@@ -34,7 +40,7 @@ function Dialog(dialogSelector, openElementSelector, closeElementSelector){
    
         if(that.dialogElement){
             that.showOverlay();
-            that.dialogElement.classList.add(showDialogClassName);
+            that.dialogElement.classList.add(SHOW_DIALOG_CLASS_NAME);
         }
         else{
             that.logBadSelectorError(dialogSelector);
@@ -46,10 +52,10 @@ function Dialog(dialogSelector, openElementSelector, closeElementSelector){
 
         if(that.dialogElement){
             that.closeOverlay();
-            that.dialogElement.classList.remove(showDialogClassName);
+            that.dialogElement.classList.remove(SHOW_DIALOG_CLASS_NAME);
         }
         else{
-            that.logBadSelectorError(dialogSelector);
+            that.logBadSelectorError(that.dialogSelector);
         }
     }
 
@@ -62,17 +68,17 @@ function Dialog(dialogSelector, openElementSelector, closeElementSelector){
     }
 
     that.showOverlay = function(){
-        let overlay = document.querySelector(overlaySelector);
+        let overlay = document.querySelector(OVERLAY_SELECTOR);
 
         if(overlay)
-            overlay.classList.add(showDialogClassName);
+            overlay.classList.add(SHOW_DIALOG_CLASS_NAME);
     }
 
     that.closeOverlay = function(){
-        let overlay = document.querySelector(overlaySelector);
+        let overlay = document.querySelector(OVERLAY_SELECTOR);
 
         if(overlay)
-            overlay.classList.remove(showDialogClassName);
+            overlay.classList.remove(SHOW_DIALOG_CLASS_NAME);
     }
 
     that.logBadSelectorError = function(selectorValue){

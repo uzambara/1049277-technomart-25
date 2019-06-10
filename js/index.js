@@ -2,24 +2,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Форма обратной связи
     let writeUsDialog = new Dialog(
-        dialogSelector = feedbackDialogSelector,
-        openElementSelector = feedbackOpenSelector,
-        closeElementSelector = feedBackCloseSelector);
+        dialogSelector = FEEDBACK_DIALOG_SELECTOR);
 
-    writeUsDialog.addOpenEventListener();
-    writeUsDialog.addCloseEventListener();
+    writeUsDialog.addOpenEventListener(FEEDBACK_OPEN_SELECTOR);
+    writeUsDialog.addCloseEventListener(FEEDBACK_CLOSE_SELECTOR);
 
     // Карта
     let mapDialog = new Dialog(
-        dialogSelector = mapDialogSelector,
-        openElementSelector = mapOpenSelector,
-        closeElementSelector = mapCloseSelector);
+        dialogSelector = MAP_DIALOG_SELECTOR);
 
-    mapDialog.addOpenEventListener();
-    mapDialog.addCloseEventListener();
+    mapDialog.addOpenEventListener(MAP_OPEN_SELECTOR);
+    mapDialog.addCloseEventListener(MAP_CLOSE_SELECTOR);
 
     // Слайдер
-    let slider = new Slider(nextSliderSelector, prevSliderSelector, sliderSelector);
+    let slider = new Slider(NEXT_SLIDER_SELECTOR, PREV_SLIDER_SELECTOR, SLIDER_SELECTOR);
     slider.addSliderListeners();
 
     let servicePairs = [
@@ -28,6 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
         new ServicePair(".company-features-item-credit", ".service-item-credit")
     ];
 
-    let services = new Services(servicePairs, currentServiceClassName);
+    let services = new Services(servicePairs, CURRENT_SERVICE_CLASS_NAME);
     services.addEventListeners();
 });
