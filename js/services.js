@@ -3,7 +3,8 @@ function Services(servicePairs, currentClassName){
 
     that.currentClassName = currentClassName;
     that.getCurrentService = function(){
-        for (const servicePair of that.servicePairs) {
+        for (let index = 0; index < that.servicePairs.length; index++) {
+            const servicePair = that.servicePairs[index];
             if(servicePair.link.classList.contains(that.currentClassName)){
                 return servicePair.link;
             }
@@ -15,7 +16,8 @@ function Services(servicePairs, currentClassName){
     that.servicePairs = servicePairs;
     that.selectedService = that.getCurrentService();
     that.addEventListeners = function(){
-        for (const pair of that.servicePairs) {
+        for (let index = 0; index < that.servicePairs.length; index++) {
+            const pair = that.servicePairs[index];
             pair.link.addEventListener("click", that.changeService);
             pair.link.childNodes[0].addEventListener("focus", that.changeService);
         }
@@ -38,10 +40,12 @@ function Services(servicePairs, currentClassName){
     }
 
     that.getContentByLink = function(link){
-        for (const servicePair of that.servicePairs) {
+        for (let index = 0; index < that.servicePairs.length; index++) {
+            const servicePair = that.servicePairs[index];
             if(servicePair.link === link){
                 return servicePair.content;
             }
+            
         }
 
         return null;
