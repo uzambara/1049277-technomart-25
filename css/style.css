@@ -623,7 +623,7 @@ a:active{
     border: none;
     position: absolute;
     top: 114px;
-    background-color: rgb(0, 0, 0, 0);
+    background-color: transparent;
     width: 20px;
     height: 40px;
     cursor: pointer;
