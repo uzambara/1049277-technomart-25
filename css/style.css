@@ -1252,6 +1252,8 @@ a:active{
     border-radius: 50%;
     display: block;
     position: relative;
+    justify-content: center;
+    align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1263,8 +1265,19 @@ a:active{
             align-items: center;
 }
 
-.social-button img{
-    position: absolute;
+.social-vkontakte img{
+    width: 26px;
+    height: 15px;
+}
+
+.social-facebook img{
+    width: 12px;
+    height: 22px;
+}
+
+.social-instagram img{
+    width: 21px;
+    height: 21px;
 }
 
 .social-button:hover{
