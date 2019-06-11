@@ -29,9 +29,15 @@ img{
     font-family: inherit;
     text-transform: uppercase;
     border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 3px;
@@ -399,7 +405,8 @@ a:active{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     min-height: 60px;
     background-color: #32425c;
     -webkit-box-shadow: inset 0px -4.5px 0 0 #293449;
@@ -499,10 +506,16 @@ a:active{
     background: rgba(0, 0, 0, 0.1);
     width: 136px;
     min-height: 38px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-transform: uppercase;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-top: 10px;
     padding-bottom: 8px;
     padding-left: 20px;
@@ -555,8 +568,12 @@ a:active{
     padding-left: 24px;
     padding-top: 24px;
     position: absolute;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
     transition-property: opacity;
-    transition-duration: 2s;
+    -webkit-transition-duration: 2s;
+         -o-transition-duration: 2s;
+            transition-duration: 2s;
     top: 0;
     left: 0;
     background-repeat: no-repeat;
@@ -649,7 +666,9 @@ a:active{
     padding-right: 24px;
     padding-bottom: 25px;
     padding-top: 25px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -682,10 +701,19 @@ a:active{
     margin-bottom: 20px;
     position: relative;
     font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .product-card:hover{
@@ -811,11 +839,11 @@ a:active{
     border-left-color: #ee3643;
 }
 
-.product-card-price-new:hover:after{
+.product-card-price-new:hover + .product-card-price-new-arrow{
     border-left-color: #ca2c37;
 }
 
-.product-card-price-new:active:after{
+.product-card-price-new:active + .product-card-price-new-arrow{
     border-left-color: #ba2732;
 }
 
@@ -1769,9 +1797,15 @@ a:active{
 }
 
 .prices-filter-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .price-delimeter{
