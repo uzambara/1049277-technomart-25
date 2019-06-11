@@ -21,7 +21,7 @@ function Dialog(dialogSelector){
         }else{
             that.logBadSelectorError(openElementSelector);
         }
-    }
+    };
 
     // Подписка для открытие формы
     that.addCloseEventListener = function(closeElementSelector){
@@ -33,7 +33,7 @@ function Dialog(dialogSelector){
         else{
             that.logBadSelectorError(closeElementSelector);
         }
-    }
+    };
 
     that.showDialog = function(){
         that.preventDefault(arguments);
@@ -45,7 +45,7 @@ function Dialog(dialogSelector){
         else{
             that.logBadSelectorError(dialogSelector);
         }
-    }
+    };
 
     that.closeDialog = function(){
         that.preventDefault(arguments);
@@ -57,7 +57,7 @@ function Dialog(dialogSelector){
         else{
             that.logBadSelectorError(that.dialogSelector);
         }
-    }
+    };
 
     that.preventDefault = function(args){
         if(args.length > 0){
@@ -65,23 +65,23 @@ function Dialog(dialogSelector){
             if(ev["preventDefault"])
                 ev.preventDefault();
         }
-    }
+    };
 
     that.showOverlay = function(){
         let overlay = document.querySelector(OVERLAY_SELECTOR);
 
         if(overlay)
             overlay.classList.add(SHOW_DIALOG_CLASS_NAME);
-    }
+    };
 
     that.closeOverlay = function(){
         let overlay = document.querySelector(OVERLAY_SELECTOR);
 
         if(overlay)
             overlay.classList.remove(SHOW_DIALOG_CLASS_NAME);
-    }
+    };
 
     that.logBadSelectorError = function(selectorValue){
         console.error("Не удалось найти элемент по селектору: " + selectorValue);
-    }
+    };
 }

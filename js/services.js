@@ -11,7 +11,7 @@ function Services(servicePairs, currentClassName){
         }
 
         return null;
-    }
+    };
 
     that.servicePairs = servicePairs;
     that.selectedService = that.getCurrentService();
@@ -21,7 +21,7 @@ function Services(servicePairs, currentClassName){
             pair.link.addEventListener("click", that.changeService);
             pair.link.childNodes[0].addEventListener("focus", that.changeService);
         }
-    }
+    };
 
     that.changeService = function(ev){
         ev.preventDefault();
@@ -37,7 +37,7 @@ function Services(servicePairs, currentClassName){
             newSelectedService.classList.toggle(VISUALLY_HIDDEN_CLASS_NAME);
 
         that.selectedService = ev.target.parentElement;
-    }
+    };
 
     that.getContentByLink = function(link){
         for (let index = 0; index < that.servicePairs.length; index++) {
@@ -49,7 +49,7 @@ function Services(servicePairs, currentClassName){
         }
 
         return null;
-    }
+    };
 }
 
 function ServicePair(linkSelector, contentSelector){
