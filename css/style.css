@@ -29,9 +29,15 @@ img{
     font-family: inherit;
     text-transform: uppercase;
     border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 3px;
@@ -249,6 +255,7 @@ img{
     height: 47px;
     
     display: inline-block;
+    vertical-align: middle;
 
     -webkit-box-shadow: inset 0px -4.5px 0 0 rgba(0, 0, 0, 0.24);
 
@@ -399,7 +406,8 @@ a:active{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     min-height: 60px;
     background-color: #32425c;
     -webkit-box-shadow: inset 0px -4.5px 0 0 #293449;
@@ -499,10 +507,16 @@ a:active{
     background: rgba(0, 0, 0, 0.1);
     width: 136px;
     min-height: 38px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-transform: uppercase;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-top: 10px;
     padding-bottom: 8px;
     padding-left: 20px;
@@ -555,8 +569,12 @@ a:active{
     padding-left: 24px;
     padding-top: 24px;
     position: absolute;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
     transition-property: opacity;
-    transition-duration: 2s;
+    -webkit-transition-duration: 2s;
+         -o-transition-duration: 2s;
+            transition-duration: 2s;
     top: 0;
     left: 0;
     background-repeat: no-repeat;
@@ -605,7 +623,7 @@ a:active{
     border: none;
     position: absolute;
     top: 114px;
-    background-color: rgb(0, 0, 0, 0);
+    background-color: transparent;
     width: 20px;
     height: 40px;
     cursor: pointer;
@@ -649,7 +667,9 @@ a:active{
     padding-right: 24px;
     padding-bottom: 25px;
     padding-top: 25px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -682,10 +702,19 @@ a:active{
     margin-bottom: 20px;
     position: relative;
     font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .product-card:hover{
@@ -705,10 +734,14 @@ a:active{
     color: #000000;
     line-height: 20px;
     font-size: 18px;
+    width: 100%;
     text-transform: none;
     font-family: "PT Sans", sans-serif;
     margin: 10px 0 12px 0;
     padding: 0 30px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 
 .product-card-image{
@@ -811,11 +844,11 @@ a:active{
     border-left-color: #ee3643;
 }
 
-.product-card-price-new:hover:after{
+.product-card-price-new:hover + .product-card-price-new-arrow{
     border-left-color: #ca2c37;
 }
 
-.product-card-price-new:active:after{
+.product-card-price-new:active + .product-card-price-new-arrow{
     border-left-color: #ba2732;
 }
 
@@ -1075,6 +1108,7 @@ a:active{
 
 .company-info-map-link{
     display: inline-block;
+    vertical-align: middle;
 }
 /* #endregion Main company info */
 
@@ -1223,6 +1257,8 @@ a:active{
     border-radius: 50%;
     display: block;
     position: relative;
+    justify-content: center;
+    align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1234,8 +1270,19 @@ a:active{
             align-items: center;
 }
 
-.social-button img{
-    position: absolute;
+.social-vkontakte img{
+    width: 26px;
+    height: 15px;
+}
+
+.social-facebook img{
+    width: 12px;
+    height: 22px;
+}
+
+.social-instagram img{
+    width: 21px;
+    height: 21px;
 }
 
 .social-button:hover{
@@ -1648,7 +1695,7 @@ a:active{
 
 /* #region Catalog list */
 .product-catalog-wrapper{
-    max-width: 700px;
+    width: 700px;
 }
 
 .product-catalog .products-list{
@@ -1769,14 +1816,21 @@ a:active{
 }
 
 .prices-filter-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .price-delimeter{
     display: inline-block;
     width: 10px;
+    vertical-align: middle;
     margin-left: 5px;
     margin-right: 5px;
     border: 0.5px solid black;

@@ -13,7 +13,7 @@ function Slider(nextSelector, prevSelector, sliderItemsSelector){
 
         currentSlide.style.opacity = "0";
         nextSlide.style.opacity = "1";
-    }
+    };
 
     that.prev = function(){
         let currentSlide = that.getSlide(that.currentSlideIndex);
@@ -21,7 +21,7 @@ function Slider(nextSelector, prevSelector, sliderItemsSelector){
 
         currentSlide.style.opacity = "0";
         nextSlide.style.opacity = "1";
-    }
+    };
 
     that.setSlideVisible = function(slide){
         for (let index = 0; index < that.slides.length; index++) {
@@ -31,7 +31,7 @@ function Slider(nextSelector, prevSelector, sliderItemsSelector){
         }
 
         slide.classList.remove("display-none");
-    }
+    };
 
     that.getSlide = function(index){
         if(that.currentSlideIndex >= that.slides.length){
@@ -42,10 +42,10 @@ function Slider(nextSelector, prevSelector, sliderItemsSelector){
         }
 
         return that.slides[that.currentSlideIndex];
-    }
+    };
 
     that.addSliderListeners = function(){
         that.nextButton.addEventListener("click", that.next);
         that.prevButton.addEventListener("click", that.prev);
-    }
+    };
 }
