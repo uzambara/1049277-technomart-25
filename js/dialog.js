@@ -3,11 +3,11 @@ function Dialog(dialogSelector){
     that.dialogSelector = dialogSelector;
     that.dialogElement = document.querySelector(dialogSelector);
 
-    window.addEventListener("keyup", function(e){
+    that.closeByEsc = function(e){
         if(e.keyCode === 27){
             that.closeDialog();
         }
-    });
+    }
 
     // Подписка для открытие формы
     that.addOpenEventListener = function(openElementSelector){
@@ -37,7 +37,8 @@ function Dialog(dialogSelector){
 
     that.showDialog = function(){
         that.preventDefault(arguments);
-   
+        window.addEventListener("keyup", that.closeByEsc);
+
         if(that.dialogElement){
             that.showOverlay();
             that.dialogElement.classList.add(SHOW_DIALOG_CLASS_NAME);
@@ -49,6 +50,7 @@ function Dialog(dialogSelector){
 
     that.closeDialog = function(){
         that.preventDefault(arguments);
+        window.removeEventListener("keyup", that.closeByEsc);
 
         if(that.dialogElement){
             that.closeOverlay();
