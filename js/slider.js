@@ -1,6 +1,6 @@
-function Slider(nextSelector, prevSelector, sliderItemsSelector){
+function Slider(nextSelector, prevSelector, sliderItemsSelector, interval = 7000){
     let that = this;
-
+    
     that.slides = document.querySelectorAll(sliderItemsSelector);
     that.currentSlideIndex = that.slides.length - 1;
 
@@ -48,4 +48,6 @@ function Slider(nextSelector, prevSelector, sliderItemsSelector){
         that.nextButton.addEventListener("click", that.next);
         that.prevButton.addEventListener("click", that.prev);
     };
+
+    setInterval(that.next, interval);
 }
