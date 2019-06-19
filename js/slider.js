@@ -1,11 +1,8 @@
-function Slider(nextSelector, prevSelector, sliderItemsSelector, interval = 7000){
+function Slider(sliderItemsSelector, interval = 7000){
     let that = this;
     
     that.slides = document.querySelectorAll(sliderItemsSelector);
     that.currentSlideIndex = that.slides.length - 1;
-
-    that.nextButton = document.querySelector(nextSelector);
-    that.prevButton = document.querySelector(prevSelector);
 
     that.next = function(){
         let currentSlide = that.getSlide(that.currentSlideIndex);
@@ -44,9 +41,11 @@ function Slider(nextSelector, prevSelector, sliderItemsSelector, interval = 7000
         return that.slides[that.currentSlideIndex];
     };
 
-    that.addSliderListeners = function(){
-        that.nextButton.addEventListener("click", that.next);
-        that.prevButton.addEventListener("click", that.prev);
+    that.addSliderListeners = function(prevSelector, nextSelector){
+        let nextButton = document.querySelector(prevSelector);
+        let prevButton = document.querySelector(nextSelector);
+        nextButton.addEventListener("click", that.next);
+        prevButton.addEventListener("click", that.prev);
     };
 
     setInterval(that.next, interval);

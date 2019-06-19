@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     writeUsDialog.addOpenEventListener(FEEDBACK_OPEN_SELECTOR);
     writeUsDialog.addCloseEventListener(FEEDBACK_CLOSE_SELECTOR);
+    writeUsDialog.addAutoFocusField(FEEDBACK_NAME_FIELD_SELECTOR);
+    writeUsDialog.addSubmitElement(".feed-back-form");
+    writeUsDialog.addFieldValidation("#feedback-form-user-name", new RegExp("^[а-яА-ЯёЁa-zA-Z0-9]+$"));
 
     // Карта
     let mapDialog = new Dialog(
@@ -15,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
     mapDialog.addCloseEventListener(MAP_CLOSE_SELECTOR);
 
     // Слайдер
-    let slider = new Slider(NEXT_SLIDER_SELECTOR, PREV_SLIDER_SELECTOR, SLIDER_SELECTOR);
-    slider.addSliderListeners();
+    let slider = new Slider(SLIDER_SELECTOR);
+    slider.addSliderListeners(NEXT_SLIDER_SELECTOR, PREV_SLIDER_SELECTOR);
 
     let servicePairs = [
         new ServicePair(".company-features-item-delivery", ".service-item-delivery"),

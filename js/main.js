@@ -2,6 +2,7 @@
 const FEEDBACK_DIALOG_SELECTOR = ".dialog-form-feedback";
 const FEEDBACK_OPEN_SELECTOR = ".button-write-us";
 const FEEDBACK_CLOSE_SELECTOR = ".dialog-form-feedback .close-button";
+const FEEDBACK_NAME_FIELD_SELECTOR = "#feedback-form-user-name";
 
 // Карта
 const MAP_DIALOG_SELECTOR = ".dialog-map";

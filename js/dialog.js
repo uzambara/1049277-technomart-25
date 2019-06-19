@@ -2,6 +2,7 @@ function Dialog(dialogSelector){
     let that = this;
     that.dialogSelector = dialogSelector;
     that.dialogElement = document.querySelector(dialogSelector);
+    that.autoFocusField = null;
 
     that.closeByEsc = function(e){
         if(e.keyCode === 27){
@@ -46,6 +47,10 @@ function Dialog(dialogSelector){
         else{
             that.logBadSelectorError(dialogSelector);
         }
+
+        if(that.autoFocusField){
+            that.autoFocusField.focus();
+        }
     };
 
     that.closeDialog = function(){
@@ -82,6 +87,49 @@ function Dialog(dialogSelector){
         if(overlay)
             overlay.classList.remove(SHOW_DIALOG_CLASS_NAME);
     };
+
+    that.addAutoFocusField = function(autoFocusFieldSelector){
+        that.autoFocusField = document.querySelector(autoFocusFieldSelector);
+    }
+
+    that.validateArguments = [];
+    that.submitDialog = function(e){
+        e.preventDefault();
+        if(that.validateArguments){
+            for (let index = 0; index < that.validateArguments.length; index++) {
+                const validateArgument = that.validateArguments[index];
+
+                let isValid = validateArgument.expression.test(validateArgument.field.value);
+                if(!isValid){
+                    //e.preventDefault();
+                    //alert(1);
+                } 
+                
+            }
+        }
+    }
+
+    that.validate = function(element, expression){
+        return element.value.match(expression);
+    }
+
+    that.submitElement;
+    that.addSubmitElement = function(submitElementSelector){
+        let submitElement = document.querySelector(submitElementSelector);
+        console.log(submitElementSelector);
+        console.log(submitElement);
+        submitElement.addEventListener("submit", that.submitDialog);
+    }
+
+    that.addFieldValidation = function(fieldSelector, regularExpression){
+        let field = document.querySelector(fieldSelector);
+
+        that.validateArguments.push({
+            field: field,
+            expression: regularExpression
+        });
+
+    }
 
     that.logBadSelectorError = function(selectorValue){
         console.error("Не удалось найти элемент по селектору: " + selectorValue);
