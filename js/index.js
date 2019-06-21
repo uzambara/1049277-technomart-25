@@ -1,4 +1,8 @@
 
+function Validity(){
+    this.patternMismatch = "Вввдите коректное имя";
+};
+
 document.addEventListener("DOMContentLoaded", function () {
     // Форма обратной связи
     let writeUsDialog = new Dialog(
@@ -7,8 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
     writeUsDialog.addOpenEventListener(FEEDBACK_OPEN_SELECTOR);
     writeUsDialog.addCloseEventListener(FEEDBACK_CLOSE_SELECTOR);
     writeUsDialog.addAutoFocusField(FEEDBACK_NAME_FIELD_SELECTOR);
-    writeUsDialog.addSubmitElement(".feed-back-form");
-    writeUsDialog.addFieldValidation("#feedback-form-user-name", new RegExp("^[а-яА-ЯёЁa-zA-Z0-9]+$"));
+    //writeUsDialog.addValidity(new Validity());
+    writeUsDialog.addSubmitForm(".button-send-feed-back");
+    writeUsDialog.setValidity(new Validity());
+    // writeUsDialog.addFieldValidation("#feedback-form-user-name", new RegExp("^[а-яА-ЯёЁa-zA-Z ]+$"), "Имя может состоять только из букв!");
+    // writeUsDialog.addFieldValidation("#feedback-form-email", new RegExp("^[а-яА-ЯёЁa-zA-Z ]+$"), "Введен неверный формат email'а!");
+    // writeUsDialog.addFieldValidation("#feedback-form-message-text", new RegExp("^(?:-|(?=.)K?Q?k?q?)$"), "Сообщение не может быть пустым!");
 
     // Карта
     let mapDialog = new Dialog(

@@ -1,6 +1,8 @@
-function Slider(sliderItemsSelector, interval = 7000){
+function Slider(sliderItemsSelector, interval){
     let that = this;
-    
+    if(!interval)
+        interval = 7000;
+        
     that.slides = document.querySelectorAll(sliderItemsSelector);
     that.currentSlideIndex = that.slides.length - 1;
 

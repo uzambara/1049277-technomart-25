@@ -478,17 +478,17 @@
             <div class="feed-back-form-wrapper">
                 <div class="feed-back-name">
                     <label class="feed-back-form-label" for="feedback-form-user-name">Ваше имя:</label>
-                    <input class="feed-back-form-input" id="feedback-form-user-name" name="name" type="text" pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$"
+                    <input class="feed-back-form-input" id="feedback-form-user-name" name="name" type="text" required pattern="^[а-яА-ЯёЁa-zA-Z]$"
                         placeholder="Имя фамилия">
                 </div>
                 <div class="feed-back-email">
                     <label class="feed-back-form-label" for="feedback-form-email">Ваш e-mail</label>
-                    <input class="feed-back-form-input" id="feedback-form-email" name="email" type="text"
+                    <input class="feed-back-form-input" id="feedback-form-email" name="email" type="email" required
                         placeholder="email@example.com">
                 </div>
                 <div class="feed-back-message">
                     <label class="feed-back-form-label" for="feedback-form-message-text">Текст письма:</label>
-                    <textarea class="feed-back-form-input feed-back-form-input-message" id="feedback-form-message-text" name="message"
+                    <textarea class="feed-back-form-input feed-back-form-input-message" id="feedback-form-message-text" name="message" required minlength="10"
                         placeholder="В свободной форме"></textarea>
                 </div>
             </div>

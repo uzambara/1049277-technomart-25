@@ -92,41 +92,64 @@ function Dialog(dialogSelector){
         that.autoFocusField = document.querySelector(autoFocusFieldSelector);
     }
 
-    that.validateArguments = [];
-    that.submitDialog = function(e){
-        e.preventDefault();
-        if(that.validateArguments){
-            for (let index = 0; index < that.validateArguments.length; index++) {
-                const validateArgument = that.validateArguments[index];
+    that.validity = null;
 
-                let isValid = validateArgument.expression.test(validateArgument.field.value);
-                if(!isValid){
-                    //e.preventDefault();
-                    //alert(1);
-                } 
-                
+    that.validateForm = function(e){
+        let el = document.getElementById("feedback-form-user-name");
+        return;
+        if(!el.checkValidity()){
+            console.log(el.validity);
+        }
+        
+        for (let key in that.validity) {
+            if (that.validity.hasOwnProperty(key)) {
+                //console.log(`${key}: ${el.validity[key]} ${that.validity[key]}`);           
+                console.log(key + " " + el.validity[key] + " " + that.validity[key]);  
             }
         }
+
+        console.log(el.validity);
+
+        // let result = true;
+        // if(that.validateArguments){
+        //     for (let index = 0; index < that.validateArguments.length; index++) {
+        //         const validateArgument = that.validateArguments[index];
+
+        //         let isValid = validateArgument.expression.test(validateArgument.field.value);
+        //         if(!isValid){
+        //             validateArgument.field.setCustomValidity(validateArgument.errorMessage);
+        //         }
+        //         else{
+        //             validateArgument.field.setCustomValidity("");
+        //         } 
+        //     }
+        // }
+    }
+    that.setValidity = function(validity){
+        that.validity = validity;
+    }
+    that.addSubmitForm = function(submitFormSelector){
+        let submitForm = document.querySelector(submitFormSelector);
+        // document.querySelector("#feedback-form-user-name").addEventListener("keyup", (e) => 
+        // {
+        //     console.log(e.target.value);
+        //     e.target.setCustomValidity("");
+        // });
+        // document.querySelector("#feedback-form-email").addEventListener("keyup", (e) => 
+        // {
+        //     console.log(e.target.value);
+        //     e.target.setCustomValidity("");
+        // });
+        submitForm.addEventListener("click", that.validateForm);
     }
 
-    that.validate = function(element, expression){
-        return element.value.match(expression);
-    }
-
-    that.submitElement;
-    that.addSubmitElement = function(submitElementSelector){
-        let submitElement = document.querySelector(submitElementSelector);
-        console.log(submitElementSelector);
-        console.log(submitElement);
-        submitElement.addEventListener("submit", that.submitDialog);
-    }
-
-    that.addFieldValidation = function(fieldSelector, regularExpression){
+    that.addFieldValidation = function(fieldSelector, regularExpression, errorMessage){
         let field = document.querySelector(fieldSelector);
-
+        //field.setCustomValidity(errorMessage);
         that.validateArguments.push({
             field: field,
-            expression: regularExpression
+            expression: regularExpression,
+            errorMessage: errorMessage
         });
 
     }
