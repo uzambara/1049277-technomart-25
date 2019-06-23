@@ -10,7 +10,7 @@ function Dialog(dialogSelector){
         }
     }
 
-    // Подписка для открытие формы
+    // Подписка для открытия формы
     that.addOpenEventListener = function(openElementSelector){
         let openElements = document.querySelectorAll(openElementSelector);
 
@@ -24,7 +24,7 @@ function Dialog(dialogSelector){
         }
     };
 
-    // Подписка для открытие формы
+    // Подписка для закрытия формы
     that.addCloseEventListener = function(closeElementSelector){
         let closeElement = document.querySelector(closeElementSelector);
 
@@ -78,83 +78,74 @@ function Dialog(dialogSelector){
         let overlay = document.querySelector(OVERLAY_SELECTOR);
 
         if(overlay)
-            overlay.classList.add(SHOW_DIALOG_CLASS_NAME);
+            overlay.classList.add(SHOW_OVERLAY_CLASS_NAME);
     };
 
     that.closeOverlay = function(){
         let overlay = document.querySelector(OVERLAY_SELECTOR);
 
         if(overlay)
-            overlay.classList.remove(SHOW_DIALOG_CLASS_NAME);
+            overlay.classList.remove(SHOW_OVERLAY_CLASS_NAME);
     };
 
     that.addAutoFocusField = function(autoFocusFieldSelector){
         that.autoFocusField = document.querySelector(autoFocusFieldSelector);
     }
 
-    that.validity = null;
-
     that.validateForm = function(e){
-        let el = document.getElementById("feedback-form-user-name");
-        return;
-        if(!el.checkValidity()){
-            console.log(el.validity);
-        }
-        
-        for (let key in that.validity) {
-            if (that.validity.hasOwnProperty(key)) {
-                //console.log(`${key}: ${el.validity[key]} ${that.validity[key]}`);           
-                console.log(key + " " + el.validity[key] + " " + that.validity[key]);  
+        console.log(e);
+        for (let validityIndex = 0; validityIndex < that.validities.length; validityIndex++) {
+            const fieldValidity = that.validities[validityIndex];
+            if (!fieldValidity.field.checkValidity()) {
+                let message = "";
+                for (const key in fieldValidity.validityMessages) {
+                    if(fieldValidity.field.validity[key] && fieldValidity.validityMessages[key])
+                        message += fieldValidity.validityMessages[key] + "\n";
+                }
+
+                fieldValidity.field.setCustomValidity(message);
             }
         }
-
-        console.log(el.validity);
-
-        // let result = true;
-        // if(that.validateArguments){
-        //     for (let index = 0; index < that.validateArguments.length; index++) {
-        //         const validateArgument = that.validateArguments[index];
-
-        //         let isValid = validateArgument.expression.test(validateArgument.field.value);
-        //         if(!isValid){
-        //             validateArgument.field.setCustomValidity(validateArgument.errorMessage);
-        //         }
-        //         else{
-        //             validateArgument.field.setCustomValidity("");
-        //         } 
-        //     }
-        // }
-    }
-    that.setValidity = function(validity){
-        that.validity = validity;
-    }
-    that.addSubmitForm = function(submitFormSelector){
-        let submitForm = document.querySelector(submitFormSelector);
-        // document.querySelector("#feedback-form-user-name").addEventListener("keyup", (e) => 
-        // {
-        //     console.log(e.target.value);
-        //     e.target.setCustomValidity("");
-        // });
-        // document.querySelector("#feedback-form-email").addEventListener("keyup", (e) => 
-        // {
-        //     console.log(e.target.value);
-        //     e.target.setCustomValidity("");
-        // });
-        submitForm.addEventListener("click", that.validateForm);
     }
 
-    that.addFieldValidation = function(fieldSelector, regularExpression, errorMessage){
+    that.validities = [];
+
+    that.addCustomValidity = function(fieldSelector, validityMessages){
         let field = document.querySelector(fieldSelector);
-        //field.setCustomValidity(errorMessage);
-        that.validateArguments.push({
-            field: field,
-            expression: regularExpression,
-            errorMessage: errorMessage
-        });
+        field.addEventListener("input", that.validateForm);
 
+        that.validities.push(new FieldValidity(field, validityMessages));
     }
 
     that.logBadSelectorError = function(selectorValue){
         console.error("Не удалось найти элемент по селектору: " + selectorValue);
     };
+}
+
+function FieldValidity(field, validityMessages){
+    return {
+        field: field,
+        validityMessages: validityMessages
+    }
+}
+
+function ValidityMessages(
+    patternMismatch = "",
+    rangeOverflow = "",
+    rangeUnderflow = "",
+    stepMismatch = "",
+    tooLong = "",
+    tooShort = "",
+    typeMismatch = "",
+    valueMissing = ""){
+    return {
+        patternMismatch: patternMismatch, // Значение не удовлетворяет шаблону, установленному в атрибуте pattern
+        rangeOverflow: rangeOverflow, // Значение превосходит атрибут max
+        rangeUnderflow: rangeUnderflow, // Значение меньше атрибута min
+        stepMismatch: stepMismatch, // Значение не соответствует указаному шагу
+        tooLong: tooLong, // Значение слишком длинное
+        tooShort: tooShort, // Значение слишком короткое
+        typeMismatch: typeMismatch, // Значение не соответствует указаному атрибуту type
+        valueMissing: valueMissing, // Отсутствует обязательное значение
+    }
 }

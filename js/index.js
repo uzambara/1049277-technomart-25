@@ -11,12 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
     writeUsDialog.addOpenEventListener(FEEDBACK_OPEN_SELECTOR);
     writeUsDialog.addCloseEventListener(FEEDBACK_CLOSE_SELECTOR);
     writeUsDialog.addAutoFocusField(FEEDBACK_NAME_FIELD_SELECTOR);
-    //writeUsDialog.addValidity(new Validity());
-    writeUsDialog.addSubmitForm(".button-send-feed-back");
-    writeUsDialog.setValidity(new Validity());
-    // writeUsDialog.addFieldValidation("#feedback-form-user-name", new RegExp("^[а-яА-ЯёЁa-zA-Z ]+$"), "Имя может состоять только из букв!");
-    // writeUsDialog.addFieldValidation("#feedback-form-email", new RegExp("^[а-яА-ЯёЁa-zA-Z ]+$"), "Введен неверный формат email'а!");
-    // writeUsDialog.addFieldValidation("#feedback-form-message-text", new RegExp("^(?:-|(?=.)K?Q?k?q?)$"), "Сообщение не может быть пустым!");
+
+    let nameValidity = new ValidityMessages(
+        patternMismatch = "Введите ваше Имя и Фамилию",
+        rangeOverflow = "",
+        rangeUnderflow = "",
+        stepMismatch = "",
+        tooLong = "",
+        tooShort = "",
+        typeMismatch = "",
+        valueMissing = "");
+    writeUsDialog.addCustomValidity("#feedback-form-user-name", nameValidity);
 
     // Карта
     let mapDialog = new Dialog(

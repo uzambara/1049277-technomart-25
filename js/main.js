@@ -18,6 +18,7 @@ const SLIDER_SELECTOR = ".promo-slider";
 const CURRENT_SERVICE_CLASS_NAME = "company-features-current";
 
 const SHOW_DIALOG_CLASS_NAME = "show-dialog";
+const SHOW_OVERLAY_CLASS_NAME = "show-overlay";
 const OVERLAY_SELECTOR = ".overlay";
 
 const VISUALLY_HIDDEN_CLASS_NAME = "visually-hidden";
