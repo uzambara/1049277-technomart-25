@@ -28,7 +28,6 @@ function Cart(cartElementSelector, cartCounterSelector, addToCartElementSelector
         }
 
         that.cartCounterElement.innerHTML = that.cartItemsCount;
-        e.preventDefault();
     }
 
     for (let index = 0; index < addToCartElements.length; index++) {
