@@ -98,9 +98,13 @@ function Dialog(dialogSelector){
             const fieldValidity = that.validities[validityIndex];
             if (!fieldValidity.field.checkValidity()) {
                 let message = "";
-                for (const key in fieldValidity.validityMessages) {
+           
+                for (let index = 0; index < Object.keys(fieldValidity.validityMessages).length; index++) {
+                    const key = Object.keys(fieldValidity.validityMessages)[index];
+
                     if(fieldValidity.field.validity[key] && fieldValidity.validityMessages[key])
                         message += fieldValidity.validityMessages[key] + "\n";
+                    
                 }
 
                 fieldValidity.field.setCustomValidity(message);
@@ -130,14 +134,14 @@ function FieldValidity(field, validityMessages){
 }
 
 function ValidityMessages(
-    patternMismatch = "",
-    rangeOverflow = "",
-    rangeUnderflow = "",
-    stepMismatch = "",
-    tooLong = "",
-    tooShort = "",
-    typeMismatch = "",
-    valueMissing = ""){
+    patternMismatch,
+    rangeOverflow,
+    rangeUnderflow,
+    stepMismatch,
+    tooLong,
+    tooShort,
+    typeMismatch,
+    valueMissing){
     return {
         patternMismatch: patternMismatch, // Значение не удовлетворяет шаблону, установленному в атрибуте pattern
         rangeOverflow: rangeOverflow, // Значение превосходит атрибут max
