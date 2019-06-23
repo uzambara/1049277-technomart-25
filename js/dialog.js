@@ -37,7 +37,7 @@ function Dialog(dialogSelector){
     };
 
     that.showDialog = function(){
-        that.preventDefault(arguments);
+        //that.preventDefault(arguments);
         window.addEventListener("keyup", that.closeByEsc);
 
         if(that.dialogElement){

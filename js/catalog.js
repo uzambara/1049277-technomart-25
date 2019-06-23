@@ -2,6 +2,8 @@ const SUCCESS_CART_ADDING_DIALOG_SELECTOR = ".dialog-form-buy-success";
 const SUCCESS_CART_ADDING_OPEN_SELECTOR = ".product-card-actions-buy";
 const SUCCESS_CART_ADDING_CLOSE_SELECTOR = ".dialog-form-buy-success .close-button";
 const CONTINUE_SHOPPING_SELECTOR = ".button.button-continue-shopping";
+const CART_SELECTOR = ".interface-link.cart";
+const CART_ITEMS_COUNTER_SELECTOR = ".cart-items-count";
 
 document.addEventListener("DOMContentLoaded", function () {
     let successCartAddingDialog = new Dialog(
@@ -10,4 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     successCartAddingDialog.addOpenEventListener(SUCCESS_CART_ADDING_OPEN_SELECTOR);
     successCartAddingDialog.addCloseEventListener(SUCCESS_CART_ADDING_CLOSE_SELECTOR);
     successCartAddingDialog.addCloseEventListener(CONTINUE_SHOPPING_SELECTOR);
+
+    let cart = new Cart(CART_SELECTOR, CART_ITEMS_COUNTER_SELECTOR, SUCCESS_CART_ADDING_OPEN_SELECTOR);
 });
