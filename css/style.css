@@ -1661,6 +1661,10 @@ a:active{
     
 }
 
+.sort-list a:hover{
+    color: #000000;
+}
+
 .sort-list .sort-item:last-child{
     margin-right: 27px;
 }
@@ -1685,6 +1689,10 @@ a:active{
 
 .sort-order a{
     margin-right: 19px;
+}
+
+.sort-order svg:hover{
+    fill: #000000;
 }
 
 .sort-order svg{
@@ -1796,10 +1804,19 @@ a:active{
     height: 25px;
 }
 
+.filter-list input:disabled + .input-indicator{
+    opacity: 0.05;
+}
+
+.filter-list input:disabled ~ .filter-value{
+    color: #e9e9e9
+}
+
 .filter-list input:focus + .input-indicator{
     outline: 5px auto -webkit-focus-ring-color;
     outline: thin dotted;
 }
+
 
 .filter-list input[type="checkbox"]:checked + .checkbox-indicator{
     background-image: url(../img/icons/checkbox-on.svg);
@@ -1913,6 +1930,10 @@ a:active{
     text-align: center;
     padding-top: 10px;
     text-transform: uppercase;
+}
+
+.pagination-item a:active{
+    border-color: #ee3643;
 }
 
 .pagination-item-next a{
