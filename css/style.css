@@ -1546,7 +1546,7 @@ a:active{
 /* #endregion Catalog user-menu */
 
 /* #region Breadcrumbs */
-.breadcrumbs ul{
+.breadcrumbs{
     margin: 0;
     padding: 0;
     display: -webkit-box;
