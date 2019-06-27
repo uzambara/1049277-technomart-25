@@ -1535,7 +1535,7 @@ a:active{
     fill: #c5c5c5;
 }
 
-.autorized-user-nav li a{
+.autorized-user-nav .autorized-user-nav-link{
     background-color: transparent;
     text-decoration: underline;
     font-size: 16px;
@@ -1574,8 +1574,7 @@ a:active{
     top: 2px;
 }
 
-.breadcrumbs li a,
-.breadcrumbs li{
+.breadcrumbs a{
     color: #000000;
     text-transform: uppercase;
     font-family: "PT Sans", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
@@ -1653,7 +1652,7 @@ a:active{
     list-style: none;
 }
 
-.sort-list .sort-item a{
+.sort-list a{
     text-transform: uppercase;
     color: #acaaa5;
     font-size: 13px;
@@ -1764,7 +1763,7 @@ a:active{
     opacity: 0.2;
 }
 
-.filter li label {
+.filter-list label {
     position: relative;
     padding-left: 35px;
     display: block;
