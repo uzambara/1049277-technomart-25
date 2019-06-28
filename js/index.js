@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         tooShort = "",
         typeMismatch = "",
         valueMissing = "");
+    writeUsDialog.addValidityForm(".dialog-form-feedback", ".button-send-feed-back");
     writeUsDialog.addCustomValidity("#feedback-form-user-name", nameValidity);
 
     // Карта

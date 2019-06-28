@@ -42,6 +42,7 @@ function Dialog(dialogSelector){
 
         if(that.dialogElement){
             that.showOverlay();
+
             that.dialogElement.classList.add(SHOW_DIALOG_CLASS_NAME);
         }
         else{
@@ -60,6 +61,7 @@ function Dialog(dialogSelector){
         if(that.dialogElement){
             that.closeOverlay();
             that.dialogElement.classList.remove(SHOW_DIALOG_CLASS_NAME);
+            that.form.classList.remove("modal-error");
         }
         else{
             that.logBadSelectorError(that.dialogSelector);
@@ -93,12 +95,13 @@ function Dialog(dialogSelector){
     }
 
     that.validateForm = function(e){
-        console.log(e);
+
+        let isValid = true;
         for (let validityIndex = 0; validityIndex < that.validities.length; validityIndex++) {
             const fieldValidity = that.validities[validityIndex];
+            let message = "";
             if (!fieldValidity.field.checkValidity()) {
-                let message = "";
-           
+                isValid = false;
                 for (let index = 0; index < Object.keys(fieldValidity.validityMessages).length; index++) {
                     const key = Object.keys(fieldValidity.validityMessages)[index];
 
@@ -110,16 +113,34 @@ function Dialog(dialogSelector){
                 fieldValidity.field.setCustomValidity(message);
             }
         }
-    }
+
+        if(!isValid){
+            that.form.classList.remove("modal-error");
+            that.form.offsetWidth = that.form.offsetWidth;
+            that.form.classList.add("modal-error");
+        }
+    };
 
     that.validities = [];
+    that.form = null;
+
+    that.addValidityForm = function(formSelector, buttonSelector){
+        that.form = document.querySelector(formSelector);
+        let button = document.querySelector(buttonSelector);
+
+        button.addEventListener("click", that.validateForm);
+    };
+
+    that.clearCustomValidity = function(e){
+        e.target.setCustomValidity("");
+    };
 
     that.addCustomValidity = function(fieldSelector, validityMessages){
         let field = document.querySelector(fieldSelector);
-        field.addEventListener("input", that.validateForm);
+        field.addEventListener("input", that.clearCustomValidity);
 
         that.validities.push(new FieldValidity(field, validityMessages));
-    }
+    };
 
     that.logBadSelectorError = function(selectorValue){
         console.error("Не удалось найти элемент по селектору: " + selectorValue);
