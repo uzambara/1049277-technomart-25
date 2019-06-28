@@ -1687,26 +1687,36 @@ img{
     list-style: none;
 }
 
-.sort-list a{
+.sort-list .sort-item{
     text-transform: uppercase;
-    color: #acaaa5;
+    color: #c1beb8;
     font-size: 13px;
     line-height: 18px;
     border-bottom: 1px dotted red; 
-    
-}
-
-.sort-list a:hover{
-    color: #000000;
 }
 
 .sort-list .sort-item:last-child{
     margin-right: 27px;
 }
 
-.sort-list .sort-item-current a{
+.sort-list .sort-item:hover{
+    color: #000000;
+    border-bottom: 1px solid red; 
+}
+
+.sort-list .sort-item:active{
+    border-bottom: 1px solid red;
+    color: #ee3643;
+    border-bottom: none;
+}
+
+.sort-list .sort-item-current{
     color: #ee3643;
     border-bottom: none; 
+}
+
+.sort-list .sort-item-current:hover{
+    color: #ee3643;
 }
 
 .sort-order{

@@ -1,3 +1,5 @@
+import * as Const from './main';
+
 export function Services(servicePairs, currentClassName){
     let that = this;
 
@@ -29,12 +31,12 @@ export function Services(servicePairs, currentClassName){
         that.selectedService.classList.toggle(that.currentClassName);
         let selectedContent = that.getContentByLink(that.selectedService);
         if(selectedContent)
-            selectedContent.classList.toggle(VISUALLY_HIDDEN_CLASS_NAME);
+            selectedContent.classList.toggle(Const.VISUALLY_HIDDEN_CLASS_NAME);
 
         ev.target.parentElement.classList.toggle(that.currentClassName);
         let newSelectedService = that.getContentByLink(ev.target.parentElement);
         if(newSelectedService)
-            newSelectedService.classList.toggle(VISUALLY_HIDDEN_CLASS_NAME);
+            newSelectedService.classList.toggle(Const.VISUALLY_HIDDEN_CLASS_NAME);
 
         that.selectedService = ev.target.parentElement;
     };
