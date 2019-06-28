@@ -2,24 +2,41 @@ function Slider(sliderItemsSelector, interval){
     let that = this;
     if(!interval)
         interval = 7000;
-        
+
     that.slides = document.querySelectorAll(sliderItemsSelector);
     that.currentSlideIndex = that.slides.length - 1;
+    that.sliderSwitcherItems = document.querySelectorAll(".slider-switcher-item");
 
     that.next = function(){
-        let currentSlide = that.getSlide(that.currentSlideIndex);
-        let nextSlide = that.getSlide(++that.currentSlideIndex);
+        let currentSlide = that.slides[that.currentSlideIndex];
+        let currentSwticherItem = that.sliderSwitcherItems[that.currentSlideIndex];
+
+        let nextIndex = that.getNextIndex(++that.currentSlideIndex);
+
+        let nextSlide = that.slides[nextIndex];
+        let nextSwitcherItem = that.sliderSwitcherItems[nextIndex];
 
         currentSlide.style.opacity = "0";
         nextSlide.style.opacity = "1";
+
+        currentSwticherItem.classList.remove("slider-switcher-item-current");
+        nextSwitcherItem.classList.add("slider-switcher-item-current");
     };
 
     that.prev = function(){
-        let currentSlide = that.getSlide(that.currentSlideIndex);
-        let nextSlide = that.getSlide(--that.currentSlideIndex);
+        let currentSlide = that.slides[that.currentSlideIndex];
+        let currentSwticherItem = that.sliderSwitcherItems[that.currentSlideIndex];
+
+        let nextIndex = that.getNextIndex(--that.currentSlideIndex);
+
+        let nextSlide = that.slides[nextIndex];
+        let nextSwitcherItem = that.sliderSwitcherItems[nextIndex];
 
         currentSlide.style.opacity = "0";
         nextSlide.style.opacity = "1";
+
+        currentSwticherItem.classList.remove("slider-switcher-item-current");
+        nextSwitcherItem.classList.add("slider-switcher-item-current");
     };
 
     that.setSlideVisible = function(slide){
@@ -32,16 +49,20 @@ function Slider(sliderItemsSelector, interval){
         slide.classList.remove("display-none");
     };
 
-    that.getSlide = function(index){
-        if(that.currentSlideIndex >= that.slides.length){
+    that.getNextIndex = function(index){
+        if(index >= that.slides.length){
             that.currentSlideIndex = 0;
         }
-        else if(that.currentSlideIndex < 0){
+        else if(index < 0){
             that.currentSlideIndex = that.slides.length - 1;
         }
 
-        return that.slides[that.currentSlideIndex];
-    };
+        return that.currentSlideIndex;
+    }
+
+    that.getSliderSwitcherItem = function(index){
+
+    }
 
     that.addSliderListeners = function(prevSelector, nextSelector){
         let nextButton = document.querySelector(prevSelector);

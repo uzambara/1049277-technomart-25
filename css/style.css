@@ -558,8 +558,27 @@ img{
 
 }
 
-.circle{
+.slider-switcher{
+    position: relative;
+    display: flex;
+    width: 30px;
+    justify-content: space-between;
+    margin: 0 auto;
+    top: 220px;
+}
 
+.slider-switcher-item{
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 10px;
+    width: 10px;
+    display: block;
+}
+
+.slider-switcher-item-current{
+    background: #ee3643;
 }
 
 .promo-slider-wrapper {
