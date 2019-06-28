@@ -52,7 +52,7 @@ img{
 }
 
 .container{
-    max-width: 960px;
+    width: 960px;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -555,6 +555,10 @@ img{
     min-height: 266px;
     padding-left: 0;
     padding-top: 0;
+
+}
+
+.circle{
 
 }
 
@@ -1508,6 +1512,8 @@ img{
     position: absolute;
     top: 15px;
     left: -16px;
+    width: 6px;
+    height: 6px;
 }
 
 .current-user{
