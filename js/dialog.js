@@ -8,7 +8,7 @@ function Dialog(dialogSelector){
         if(e.keyCode === 27){
             that.closeDialog();
         }
-    }
+    };
 
     // Подписка для открытия формы
     that.addOpenEventListener = function(openElementSelector){
@@ -92,7 +92,7 @@ function Dialog(dialogSelector){
 
     that.addAutoFocusField = function(autoFocusFieldSelector){
         that.autoFocusField = document.querySelector(autoFocusFieldSelector);
-    }
+    };
 
     that.validateForm = function(e){
 
@@ -151,7 +151,7 @@ function FieldValidity(field, validityMessages){
     return {
         field: field,
         validityMessages: validityMessages
-    }
+    };
 }
 
 function ValidityMessages(
@@ -171,6 +171,6 @@ function ValidityMessages(
         tooLong: tooLong, // Значение слишком длинное
         tooShort: tooShort, // Значение слишком короткое
         typeMismatch: typeMismatch, // Значение не соответствует указаному атрибуту type
-        valueMissing: valueMissing, // Отсутствует обязательное значение
-    }
+        valueMissing: valueMissing // Отсутствует обязательное значение
+    };
 }

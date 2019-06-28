@@ -1480,11 +1480,8 @@ img{
 /* #region Catalog.html */
 
 /* #region Catalog user-menu */
-.autorized-user-nav .current-user{
-    position: relative;
-    padding-left: 46px;
-    text-align: left;
-
+.current-user svg{
+    fill: #c5c5c5;
 }
 
 .current-user:hover svg{
@@ -1492,7 +1489,7 @@ img{
 }
 
 .current-user:active svg{
-    fill: #c5c5c5;
+    fill: #cacaca;
 }
 
 .autorized-user-nav ul{
@@ -1513,18 +1510,35 @@ img{
     left: -16px;
 }
 
+.current-user{
+    position: relative;
+}
+
+.current-user .current-user-name{
+    padding-left: 50px;
+    text-align: left;
+}
+
+.current-user .current-user-name:hover{
+    color: #000000;
+}
+
+.current-user .current-user-name:active{
+    color: #cacaca;
+}
+
 .user-icon{
     position: absolute;
     left: 13px;
     top: 12px;
-    fill: #c5c5c5;
 }
 
-.logout-icon{
+.current-user .logout-icon{
     position: absolute;
-    top: 13px;
-    right: 10px;
-    fill: #c5c5c5;
+    right: 0px;
+    top: 0px;
+    padding-right: 11px;
+    padding-top: 13px;
 }
 
 .autorized-user-nav .autorized-user-nav-link{
