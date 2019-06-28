@@ -1,4 +1,4 @@
-function Services(servicePairs, currentClassName){
+export function Services(servicePairs, currentClassName){
     let that = this;
 
     that.currentClassName = currentClassName;
@@ -52,7 +52,7 @@ function Services(servicePairs, currentClassName){
     };
 }
 
-function ServicePair(linkSelector, contentSelector){
+export function ServicePair(linkSelector, contentSelector){
     this.link = document.querySelector(linkSelector);
     this.content = document.querySelector(contentSelector);
 }

@@ -1,4 +1,6 @@
-function Dialog(dialogSelector){
+import * as Const from './main';
+
+export default function Dialog(dialogSelector){
     let that = this;
     that.dialogSelector = dialogSelector;
     that.dialogElement = document.querySelector(dialogSelector);
@@ -19,7 +21,8 @@ function Dialog(dialogSelector){
                 const openElement = openElements[index];
                 openElement.addEventListener("click", that.showDialog);
             }
-        }else{
+        }
+        else{
             that.logBadSelectorError(openElementSelector);
         }
     };
@@ -43,7 +46,7 @@ function Dialog(dialogSelector){
         if(that.dialogElement){
             that.showOverlay();
 
-            that.dialogElement.classList.add(SHOW_DIALOG_CLASS_NAME);
+            that.dialogElement.classList.add(Const.SHOW_DIALOG_CLASS_NAME);
         }
         else{
             that.logBadSelectorError(dialogSelector);
@@ -60,7 +63,7 @@ function Dialog(dialogSelector){
 
         if(that.dialogElement){
             that.closeOverlay();
-            that.dialogElement.classList.remove(SHOW_DIALOG_CLASS_NAME);
+            that.dialogElement.classList.remove(Const.SHOW_DIALOG_CLASS_NAME);
             that.form.classList.remove("modal-error");
         }
         else{
@@ -77,17 +80,17 @@ function Dialog(dialogSelector){
     };
 
     that.showOverlay = function(){
-        let overlay = document.querySelector(OVERLAY_SELECTOR);
+        let overlay = document.querySelector(Const.OVERLAY_SELECTOR);
 
         if(overlay)
-            overlay.classList.add(SHOW_OVERLAY_CLASS_NAME);
+            overlay.classList.add(Const.SHOW_OVERLAY_CLASS_NAME);
     };
 
     that.closeOverlay = function(){
-        let overlay = document.querySelector(OVERLAY_SELECTOR);
+        let overlay = document.querySelector(Const.OVERLAY_SELECTOR);
 
         if(overlay)
-            overlay.classList.remove(SHOW_OVERLAY_CLASS_NAME);
+            overlay.classList.remove(Const.SHOW_OVERLAY_CLASS_NAME);
     };
 
     that.addAutoFocusField = function(autoFocusFieldSelector){
@@ -154,7 +157,7 @@ function FieldValidity(field, validityMessages){
     };
 }
 
-function ValidityMessages(
+export function ValidityMessages(
     patternMismatch,
     rangeOverflow,
     rangeUnderflow,

@@ -4,7 +4,8 @@
   "description": "* Студент: [Симонов Егор](https://up.htmlacademy.ru/htmlcss/25/user/1049277). * Наставник: [Игорь Белогуров](https://htmlacademy.ru/profile/id1026635).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/uzambara/1049277-technomart-25/issues"
   },
-  "homepage": "https://github.com/uzambara/1049277-technomart-25#readme"
+  "homepage": "https://github.com/uzambara/1049277-technomart-25#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
+  }
 }

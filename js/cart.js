@@ -1,6 +1,6 @@
 const CART_WITH_PRODUCTS_CLASS_NAME = "cart-with-products";
 
-function Cart(cartElementSelector, cartCounterSelector, addToCartElementSelector){
+export default function Cart(cartElementSelector, cartCounterSelector, addToCartElementSelector){
     let that = this;
     that.cartItemsCount = 0;
 

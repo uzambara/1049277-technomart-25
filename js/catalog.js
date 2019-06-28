@@ -5,6 +5,9 @@ const CONTINUE_SHOPPING_SELECTOR = ".button.button-continue-shopping";
 const CART_SELECTOR = ".interface-link.cart";
 const CART_ITEMS_COUNTER_SELECTOR = ".cart-items-count";
 
+import Cart from './cart';
+import Dialog from './dialog';
+
 document.addEventListener("DOMContentLoaded", function () {
     let cart = new Cart(CART_SELECTOR, CART_ITEMS_COUNTER_SELECTOR, SUCCESS_CART_ADDING_OPEN_SELECTOR);
     let successCartAddingDialog = new Dialog(

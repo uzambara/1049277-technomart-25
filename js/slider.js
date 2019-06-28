@@ -1,4 +1,4 @@
-function Slider(sliderItemsSelector, interval){
+export default function Slider(sliderItemsSelector, interval){
     let that = this;
     if(!interval)
         interval = 7000;
