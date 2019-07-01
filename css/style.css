@@ -1,6 +1,6 @@
 /* #region Common */
 body{
-    font-family: Cuprum, "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-family: Cuprum, "Arial", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -168,7 +168,7 @@ img{
     line-height: 18px;
     padding-left: 50px;
     color: #ffffff;
-    font-family: Cuprum, "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-family: Cuprum, "Arial", sans-serif;
 }
 
 .interface-link .search-input::-webkit-input-placeholder{
@@ -424,6 +424,7 @@ img{
     padding: 19px 30px 19px 30px;
     max-width: 190px;
     height: 100%;
+    color: #f5f6f6;
 }
 
 .site-nav a:hover{
@@ -717,6 +718,7 @@ img{
     margin: 0;
     text-transform: uppercase;
     font-weight: normal;
+    max-width: 590px;
 }
 
 .product-card{
@@ -761,7 +763,7 @@ img{
     font-size: 18px;
     width: 100%;
     text-transform: none;
-    font-family: "PT Sans", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     margin: 10px 0 12px 0;
     padding: 0 30px;
     -webkit-box-flex: 1;
@@ -834,7 +836,7 @@ img{
     font-size: 17px;
     line-height: 18px;
     color: #ffffff;
-    font-family: "PT Sans", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     text-transform: uppercase;
 }
 
@@ -844,7 +846,7 @@ img{
     min-height: 20px;;
     color: #a9a9a9;
     text-decoration: line-through;
-    font-family: "PT Sans", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     margin-bottom: 5px;
 }
 
@@ -938,7 +940,7 @@ img{
     padding: 0;
     margin: 0;
     margin-bottom: 68px;
-    font-family: "PT Sans", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 24px;
 }
@@ -974,7 +976,7 @@ img{
     font-size: 13px;
     line-height: 24px;
     color: #000000;
-    font-family: "PT Sans", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     margin: 0;
     width: 380px;
     margin-bottom: 27px;
@@ -1084,7 +1086,7 @@ img{
     line-height: 24px;
     padding-bottom: 23px;
     margin: 0;
-    font-family: "PT Sans", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .company-info-delivery-types{
@@ -1175,6 +1177,7 @@ img{
 
 .footer-nav-wrapper{
     padding-top: 38px;
+    width: 560px;
 }
 
 .main-footer-nav ul{
@@ -1470,7 +1473,7 @@ img{
     margin-bottom: 20px;
     border: 2px solid #dee3e4;
     border-radius: 3px;
-    font-style: "PT Sans", sans-serif;
+    font-family: "PT Sans", sans-serif;
     padding: 5px 15px;
     font-size: 13px;
     line-height: 18px;
@@ -1596,6 +1599,11 @@ img{
 .breadcrumbs li{
     margin-right: 40px;
     position: relative;
+    font-family: "PT Sans", "Arial", sans-serif;
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 13px;
+    line-height: 18px;
 }
 
 .breadcrumbs-list-style{
@@ -1611,15 +1619,11 @@ img{
 
 .breadcrumbs a{
     color: #000000;
-    text-transform: uppercase;
-    font-family: "PT Sans", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
-    font-size: 13px;
-    line-height: 18px;
 }
 /* #endregion Breadcrumbs */
 
 .product{
-    font-family: "PT Sans", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1640,10 +1644,11 @@ img{
     padding-top: 26px;
     padding-left: 26px;
     padding-bottom: 26px;
-    font-family: "Cuprum", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     margin: 0;
     margin-bottom: 25px;
     width: 100%;
+    color: #32425c;
 }
 
 /* #region Catalog sort */
@@ -1919,7 +1924,8 @@ img{
     border: 8px solid #ffffff;
     position: absolute;
     top: -10px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .price-control_start-range-indicator{
@@ -2028,6 +2034,10 @@ img{
     text-transform: uppercase;
 }
 
+.pagination-item a:hover{
+    border-color: #bdc6ca;
+}
+
 .pagination-item a:active{
     border-color: #ee3643;
 }
@@ -2069,7 +2079,7 @@ img{
 .about-product p{
     font-size: 13px;
     line-height: 24px;
-    font-family: "PT Sans", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     margin: 0;
 }
 /* #endregion Catalog.html */

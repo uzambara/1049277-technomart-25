@@ -5,15 +5,15 @@ export default function Cart(cartElementSelector, cartCounterSelector, addToCart
     that.cartItemsCount = 0;
 
     that.cart = document.querySelector(cartElementSelector);
-    if(that.cartItemsCount === 0){
-        that.cart.classList.remove(CART_WITH_PRODUCTS_CLASS_NAME);
-    }
-    else{
-        that.cart.classList.add(CART_WITH_PRODUCTS_CLASS_NAME);
-    }
+    // if(that.cartItemsCount === 0){
+    //     that.cart.classList.remove(CART_WITH_PRODUCTS_CLASS_NAME);
+    // }
+    // else{
+    //     that.cart.classList.add(CART_WITH_PRODUCTS_CLASS_NAME);
+    // }
 
     that.cartCounterElement = document.querySelector(cartCounterSelector);
-    that.cartCounterElement.innerHTML = that.cartItemsCount;
+    // that.cartCounterElement.innerHTML = that.cartItemsCount;
 
     let addToCartElements = document.querySelectorAll(addToCartElementSelector);
 
