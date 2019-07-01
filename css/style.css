@@ -1879,7 +1879,58 @@ img{
     background-color: #f7f3ec;
     margin-bottom: 9px;
     border-radius: 3px;
+    position: relative;
 }
+
+.price-control__range{
+    position: relative;
+    width: 170px;
+    height: 2px;
+    background-color: #00ca74;
+    margin: 0 auto;
+    top: 50%;
+}
+
+.price-control__range::before{
+    width: 20px;
+    height: 2px;
+    background-color: #d7dcde;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+.price-control__range::after{
+    width: 20px;
+    height: 2px;
+    background-color: #d7dcde;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+.price-control_range-indicator{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ababab;
+    border: 8px solid #ffffff;
+    position: absolute;
+    top: -10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.price-control_start-range-indicator{
+    left: 0px;
+}
+
+.price-control_end-range-indicator{
+    right: 20px;
+}
+
+
 
 .prices-filter-wrapper{
     display: -webkit-box;
